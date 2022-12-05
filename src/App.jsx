@@ -15,6 +15,7 @@ import Pilates from "./pages/Pilates";
 import PoleDance from "./pages/PoleDance";
 import Tarifs from "./pages/Tarifs";
 import Yoga from "./pages/Yoga";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/poledance" element={<PoleDance />} />
           <Route path="/tarifs" element={<Tarifs />} />
           <Route path="/yoga" element={<Yoga />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
         <Footer />
       </HashRouter>
