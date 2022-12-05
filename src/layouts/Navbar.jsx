@@ -11,7 +11,9 @@ const navbar = () => {
     <header>
       <nav className="navbar">
         <ul>
-          <h4>PoleDanceAnglet</h4>
+          <NavLink to="/acceuil">
+            <h4>PoleDanceAnglet</h4>
+          </NavLink>
           {navbarList.map((link) => (
             <NavLink key={link.id} to={link.path}>
               <li>{link.title}</li>
