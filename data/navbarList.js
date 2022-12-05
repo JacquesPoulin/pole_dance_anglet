@@ -1,9 +1,10 @@
-// Datas to map in the navbar
+// >> LIENS DE NAVIGATION DU SITE
+
 const navLinks = [
   {
     id: 1,
-    path: "/acceuil",
-    title: "Acceuil",
+    path: "/accueil",
+    title: "Accueil",
   },
   {
     id: 2,
@@ -12,21 +13,36 @@ const navLinks = [
   },
   {
     id: 3,
-    path: "/workshops",
-    title: "Workshops",
+    path: "/evjf",
+    title: "EVJF",
   },
   {
     id: 4,
-    path: "/gallerie",
-    title: "Gallerie",
+    path: "/poledance",
+    title: "Pole Dance",
   },
   {
     id: 5,
-    path: "/presse",
-    title: "Presse",
+    path: "/pilates",
+    title: "Pilates",
   },
   {
     id: 6,
+    path: "/yoga",
+    title: "Yoga",
+  },
+  {
+    id: 7,
+    path: "/tarifs",
+    title: "Tarifs",
+  },
+  {
+    id: 8,
+    path: "/galerie",
+    title: "Galerie",
+  },
+  {
+    id: 9,
     path: "/contact",
     title: "Contact",
   },
