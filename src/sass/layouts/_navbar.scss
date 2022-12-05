@@ -1,7 +1,10 @@
 .navbar {
-  min-width: 100%;
-  transition: all 0.1s linear;
   position: fixed;
+  min-width: 100%;
+  min-height: 115px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  transition: all 0.1s linear;
   z-index: 10;
   ul {
     min-width: 100%;
@@ -12,9 +15,11 @@
     align-items: center;
     outline: none;
 
+
   li {
-    font-weight: 600;
-    color: #E2FCEF;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
     transition: all 0.3s ease-in-out;
     outline: none;
     text-decoration: none;
@@ -27,9 +32,10 @@
 
   h4 {
     position: absolute;
+    top: 2rem;
     left: 2rem;;
     font-weight: 600;
-    color: #E2FCEF;
+    color: #f0f8ff;
     transition: all 0.3s ease-in-out;
     outline: none;
     text-decoration: none;
