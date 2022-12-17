@@ -1,0 +1,14 @@
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating to a reusable component.
+*/
+
+//Import Component files
+@import "./globals/button";
+@import "./globals/input";
+@import "./globals/modal";
+@import "./globals/accordion";
+@import "./globals/dropdown";
+@import "./globals/form";
+@import "./biographie/parcours";
+@import "./methode/methode.scss";

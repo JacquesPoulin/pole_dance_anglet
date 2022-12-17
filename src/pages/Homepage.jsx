@@ -2,16 +2,14 @@ import React, { useState } from "react";
 
 // ----- Packages  -----
 import { Typewriter } from "react-simple-typewriter";
+import { Link } from "react-scroll";
 
 const Homepage = () => {
   // ! ***** RENDERING ******
   return (
-    <div className="homepage">
+    <div name="Accueil" className="homepage">
       <video id="background-video" autoPlay loop muted playsInline>
-        <source
-          src="../../public/videos/VID-20221124-WA0029.mp4"
-          type="video/mp4"
-        />
+        <source src="/videos/sonia_pole_landing.mp4" type="video/mp4" />
       </video>
 
       <div className="homepage__presentation">
@@ -33,6 +31,21 @@ const Homepage = () => {
           />
         </h5>
       </div>
+      <Link
+        activeClass="active"
+        to="Biographie"
+        spy
+        smooth
+        isDynamic
+        duration={1000}
+      >
+        <div className="homepage__arrow-container">
+          <img
+            src="../../public/images/png/kisspng-arrow-computer-icons-logo-white-down-arrow-png-5ab1bd5cde13f0.7986932615215977889096.png"
+            alt=""
+          />
+        </div>
+      </Link>
     </div>
   );
 };

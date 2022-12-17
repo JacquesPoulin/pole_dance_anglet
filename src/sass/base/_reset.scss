@@ -17,6 +17,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: 'Quicksand', sans-serif;
 }
 
 // HTML5 display-role reset for older browsers
@@ -113,4 +114,9 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+button {
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
 }

@@ -1,0 +1,38 @@
+.parcours {
+  position: absolute;
+  min-width: 100%;
+  
+  &__text-container {
+    position: absolute;
+    width: 100%;
+    margin: 3rem 0 0 3rem;
+    
+    &__text {
+      width: 550px;
+      background: rgba( 255, 255, 255, 0.4 );
+      box-shadow: 0 8px 32px 0 rgba(62, 31, 135, 0.37);
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      padding: 1rem;
+
+      li {
+        margin: 0;
+        font-size: 1rem;
+        padding: 0.5rem 0 0.5rem 2rem;
+        font-weight: 500;
+        text-align: justify;
+        line-height: 20px;
+        text-justify: inter-word;
+        list-style: none;
+        background-image: url("../../../../public/images/svg/right-arrow-svgrepo-com.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 20px;
+        cursor: text;
+      }
+
+    }
+  }
+}

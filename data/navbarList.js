@@ -1,6 +1,6 @@
 // >> LIENS DE NAVIGATION DU SITE
 
-const navLinks = [
+const navbarList = [
   {
     id: 1,
     path: "/accueil",
@@ -48,4 +48,4 @@ const navLinks = [
   },
 ];
 
-export default navLinks;
+export default navbarList;

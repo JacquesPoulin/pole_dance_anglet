@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   min-width: 100%;
   min-height: 115px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -15,20 +15,75 @@
     align-items: center;
     outline: none;
 
-
   li {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 2px;
-    margin-right: 2rem;
+    height: 100%;
+    position: relative;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 10px;
+    margin-right: 20px;
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     &:hover {
       color: #c745be;
     }
-  }
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 0px solid transparent;
+      width: 120%;
+      height: 0%;
+      border-left: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 0px solid transparent;
+      width: 0%;
+      height: 80%;
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transition: all 0.1s ease;
+    }
+    &:hover {
+      &::before {
+        height: 80%;
+      }
+    }
+    &:hover {
+      &::after {
+        width: 120%;
+      }
+    }
+  animation: colorChange 8s ease-in-out infinite alternate;
+}
+
+    @keyframes colorChange {
+        0% {
+          color: #668ada;
+        }
+        
+        25% {
+          color: #c745be;
+        }
+        50% {
+          color: #3c6fb6;
+        }
+        100% {
+          color: #8a4985;
+        }
+      }
 
   h4 {
     position: absolute;
@@ -40,21 +95,22 @@
     outline: none;
     text-decoration: none;
     letter-spacing: 2px;
-    animation: colorChange 2s ease-in-out infinite alternate;
-    }
+    animation: colorChange 5s ease-in-out infinite alternate;
+  }
+  
     @keyframes colorChange {
         0% {
-          color: #ba15af;
+          color: #668ada;
         }
         
         25% {
-          color: #910c88;
-        }
-        50% {
           color: #c745be;
         }
+        50% {
+          color: #3c6fb6;
+        }
         100% {
-          color: #eb8ae4;
+          color: #8a4985;
         }
       }
   }
