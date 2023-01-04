@@ -61,6 +61,9 @@
     -webkit-backdrop-filter: blur(20px);
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    &__txtBloc2 {
+      text-align: center;
+    }
     p{
       font-size: 1rem;
       line-height: 1.5rem;
@@ -70,6 +73,9 @@
       color: aliceblue;
       line-height: 2rem;
       cursor: text;
+    }
+    u {
+      margin-right: 10px;
     }
   }
 }
@@ -144,4 +150,10 @@ button {
           color: #f8946c;
         }
       }
+}
+.highlight{
+  padding: 1px 5px 3px 5px;
+  margin: 0 3px 0 5px;
+  border-radius: 10px;
+  background-color: #af0fcf;
 }

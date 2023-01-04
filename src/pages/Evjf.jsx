@@ -9,44 +9,57 @@ const Evjf = () => {
         <div className="evjf__text-container">
           <div className="evjf__text-container__presentation">
             {/**** PRESENTATION ****/}
-            <p className="evjf__text-container__presentation__leftText">
+            <p className="evjf__text-container__presentation__txtBloc1">
               Parce que nous voulons toutes raconter de belles histoires, notre
               désir le plus cher est d’offrir à notre meilleure amie
               l’Enterrement de Vie de Jeune Fille de ses rêves. Trouver
               l’activité idyllique pour rendre l’enterrement de vie de jeune
-              fille plus qu’unique n’est pas une mince affaire. Dans cette
-              optique, qui de mieux que de convaincre la future mariée de mettre
-              son charme et sa souplesse à profit de sa journée en se laissant
-              séduire par un cours de pôle dance !
+              fille plus qu’unique n’est pas une mince affaire...
+              <br />
+              Dans cette optique, qui de mieux que de convaincre la future
+              mariée de mettre son charme et sa souplesse à profit de sa journée
+              en se laissant séduire par un cours de pôle dance !
             </p>
             <br />
-            <p className="evjf__text-container__presentation__rightText">
+            <p className="evjf__text-container__presentation__txtBloc2">
               Choisissez une <span> activité très en vogue pour un EVJF </span>
-              sous les signes de : la <u>sensualité</u> et des{" "}
-              <u>rires garantis</u>.
+              sous 2 signes : <br />
+              <span className="highlight">sensualité</span>&
+              <span className="highlight">rires garantis</span>
               <br />
-              Les principaux objectifs sont :
+              <br />
+              Pourquoi choisir cette activité ?
             </p>
             <br />
             <ul>
               <li>
-                <span>Originalité</span> ↪️ même si de plus en plus demandé,
-                beaucoup n'en ont jamais fait.
+                <span>
+                  <u>Originalité</u>
+                </span>
+                ↪ Même s'il s'agit d'une activité de plus en plus demandée,
+                beaucoup n'en ont jamais fait !
               </li>
 
               <li>
-                <span>Sportivité</span> ↪️ on bouge, on élimine ... votre corps
-                appréciera.
+                <span>
+                  <u>Sportivité</u>
+                </span>
+                ↪ On bouge, on élimine ... votre corps appréciera.
               </li>
 
               <li>
-                <span>Sensualité</span> ↪️ le futur marié sera ravi de découvrir
-                ce que sa dulciné a appris.
+                <span>
+                  <u>Sensualité</u>
+                </span>
+                ↪ Pensez au futur marié qui sera ravi de découvrir ce que sa dulciné a appris.
               </li>
 
               <li>
-                <span>Fun</span> ↪️ le plus important seront les bons moments
-                conviviaux passés entre vous !
+                <span>
+                  <u>Fun</u>
+                </span>
+                ↪ Et bien sûr, le plus important seront les bons moments conviviaux passés
+                entre vous !
               </li>
             </ul>
           </div>
