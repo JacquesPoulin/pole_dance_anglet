@@ -31,7 +31,12 @@
 	
 	&__thumb {
 		position: relative;
-		height: 350px;
+		height: 400px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
 	}
 	
 	&__image {
@@ -39,7 +44,6 @@
 		height: 400px;
 		display: block;
 		transition: 0.3s;
-		
 		&:hover {
 			transform: scale(1.1);
 		}
