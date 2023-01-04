@@ -14,7 +14,7 @@ const Galerie = () => {
         {galleryList?.map(({ id, imgSource, alt, galleyStyle }) => (
           <div className="gallery__column" key={id}>
             <div className="gallery__link">
-              {/*** PICTURE ***/}
+              {/*** PICTURES ***/}
               <figure className="gallery__thumb">
                 <img src={imgSource} alt={alt} className={galleyStyle} />
               </figure>
