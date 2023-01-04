@@ -2,8 +2,8 @@ import React from "react";
 
 const PoleDance = () => {
   return (
-    <div name="Pole Dance parallax">
-      <h1>PoleDance</h1>
+    <div name="Pole Dance" className="poleDance">
+      <h1>Pole Dance</h1>
     </div>
   );
 };

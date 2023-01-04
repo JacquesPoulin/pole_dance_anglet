@@ -21,10 +21,10 @@ const App = () => {
       <Homepage />
       <Biographie />
       <Evjf />
-      <Galerie />
-      <Pilates />
       <PoleDance />
+      <Pilates />
       <Yoga />
+      <Galerie />
       <Tarifs />
       <Contact />
       <Footer />

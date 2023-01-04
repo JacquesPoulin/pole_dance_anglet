@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 
 import Parcours from "../components/Parcours";
@@ -23,6 +23,7 @@ const Biographie = () => {
         </div>
       </div>
 
+      {/* ***ARROW DOWN *** */}
       <Link activeClass="active" to="EVJF" spy smooth isDynamic duration={1000}>
         <div className="bio__arrow-container">
           <img

@@ -69,21 +69,21 @@
   animation: colorChange 8s ease-in-out infinite alternate;
 }
 
-    @keyframes colorChange {
-        0% {
-          color: #668ada;
-        }
-        
-        25% {
-          color: #c745be;
-        }
-        50% {
-          color: #3c6fb6;
-        }
-        100% {
-          color: #8a4985;
-        }
+  @keyframes colorChange {
+      0% {
+        color: #668ada;
       }
+      
+      25% {
+        color: #c745be;
+      }
+      50% {
+        color: #3c6fb6;
+      }
+      100% {
+        color: #8a4985;
+      }
+    }
 
   h4 {
     position: absolute;

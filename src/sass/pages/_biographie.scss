@@ -41,7 +41,7 @@
 
 // >> PARALLAX EFFECT
 .parallax {
-  background-image: url("../../../public/images/portrait/IMG-20221124-WA0025.jpg");
+  background-image: url("images/portrait/IMG-20221124-WA0025.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,6 +79,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  cursor: none;
 }
 
 .button:hover {
