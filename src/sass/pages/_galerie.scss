@@ -1,8 +1,23 @@
+.gallerie {
+	&__title {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2rem;
+	}
+	h1 {
+		color: aliceblue;
+	}
+}
+
 .gallery {
 	display: flex;
   flex-wrap: wrap;
 	padding: 2px;
 	transition: 0.3s;
+
+	
 
 	&:hover &__image {
 		filter: grayscale(1);

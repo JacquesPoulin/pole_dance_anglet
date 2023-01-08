@@ -6,7 +6,9 @@ import galleryList from "../../data/galleryList";
 const Galerie = () => {
   return (
     <div name="Galerie" className="gallerie">
-      <h1>Galerie</h1>
+      <div>
+        <h1 className="gallerie__title">Galerie</h1>
+      </div>
 
       {/*** MAIN GALLERY BLOC ***/}
       <div className="gallery">
