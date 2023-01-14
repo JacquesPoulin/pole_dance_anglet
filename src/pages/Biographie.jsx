@@ -8,11 +8,11 @@ const Biographie = () => {
   return (
     <div name="Biographie" className="bio parallax">
       <div className="bio__buttons-container">
-        <button class="button" role="button">
+        <button className="button" role="button">
           PARCOURS
         </button>
 
-        <button class="button" role="button">
+        <button className="button" role="button">
           METHODE
         </button>  
         <div className="bio__components">

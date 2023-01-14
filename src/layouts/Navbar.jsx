@@ -15,8 +15,16 @@ const navbar = () => {
             <h4>PoleDanceAnglet</h4>
           </Link>
           {navbarList?.map(({ id, title }) => (
-            <Link to={title} spy smooth isDynamic offset={5} duration={1000}>
-              <li key={id}>{title && title}</li>
+            <Link
+              key={id}
+              to={title}
+              spy
+              smooth
+              isDynamic
+              offset={5}
+              duration={1000}
+            >
+              <li>{title && title}</li>
             </Link>
           ))}
         </ul>
