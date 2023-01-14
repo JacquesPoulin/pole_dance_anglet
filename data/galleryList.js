@@ -1,4 +1,4 @@
-// >> LIENS DU PARCOURS
+// >> LISTE DES PHOTOS
 
 const galleryList = [
   {
