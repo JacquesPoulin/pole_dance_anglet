@@ -14,7 +14,7 @@ const Biographie = () => {
 
         <button className="button" role="button">
           METHODE
-        </button>  
+        </button>
         <div className="bio__components">
           <Parcours />
           <div>
@@ -22,16 +22,6 @@ const Biographie = () => {
           </div>
         </div>
       </div>
-
-      {/* ***ARROW DOWN *** */}
-      <Link activeClass="active" to="EVJF" spy smooth isDynamic duration={1000}>
-        <div className="bio__arrow-container">
-          <img
-            src="../../public/images/png/kisspng-arrow-computer-icons-logo-white-down-arrow-png-5ab1bd5cde13f0.7986932615215977889096.png"
-            alt=""
-          />
-        </div>
-      </Link>
     </div>
   );
 };
