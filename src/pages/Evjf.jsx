@@ -51,15 +51,16 @@ const Evjf = () => {
                 <span>
                   <u>Sensualité</u>
                 </span>
-                ↪ Pensez au futur marié qui sera ravi de découvrir ce que sa dulciné a appris.
+                ↪ Pensez au futur marié qui sera ravi de découvrir ce que sa
+                dulciné a appris.
               </li>
 
               <li>
                 <span>
                   <u>Fun</u>
                 </span>
-                ↪ Et bien sûr, le plus important seront les bons moments conviviaux passés
-                entre vous !
+                ↪ Et bien sûr, le plus important seront les bons moments
+                conviviaux passés entre vous !
               </li>
             </ul>
           </div>
@@ -68,23 +69,6 @@ const Evjf = () => {
             <button class="pulse">Devis immédiat</button>
           </div>
         </div>
-
-        {/****ARROW DOWN ****/}
-        <Link
-          activeClass="active"
-          to="Pole Dance"
-          spy
-          smooth
-          isDynamic
-          duration={1000}
-        >
-          <div className="evjf__arrow-container">
-            <img
-              src="../../public/images/png/kisspng-arrow-computer-icons-logo-white-down-arrow-png-5ab1bd5cde13f0.7986932615215977889096.png"
-              alt=""
-            />
-          </div>
-        </Link>
       </div>
     </div>
   );
