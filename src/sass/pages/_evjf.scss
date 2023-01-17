@@ -90,12 +90,12 @@ $colors: (
   pulse: #b89657, 
 );
 
-@each $button, $color in $colors {
-  .#{$button} {
-    --color: #{$color};
-    --hover: #{adjust-hue($color, 45deg)};
-  }
-}
+// @each $button, $color in $colors {
+//   .#{$button} {
+//     --color: #{$color};
+//     --hover: #{adjust-hue($color, 45deg)};
+//   }
+// }
 
 button {
   background: transparent;
@@ -110,28 +110,29 @@ button {
   color: aliceblue;
   letter-spacing: 1px;
   animation: colorAnime 5s ease-in-out infinite alternate;
-  &:hover,
-  &:focus { 
-    border-color: var(--hover);
-    color: aliceblue
+  &:hover{ 
+    // border-color: var(--hover);
+    color: #f8946c;
   }
 
-  @keyframes colorAnime {
-        0% {
-          color: #FFDAC6;
-        }
-        
-        25% {
-          color: #b0a1ec;
-        }
-        50% {
-          color: #ff9bd5;
-        }
-        100% {
-          color: #f8946c;
-        }
-      }
+  // @keyframes colorAnime {
+  //   0% {
+  //     color: #FFDAC6;
+  //   }
+    
+  //   25% {
+  //     color: #b0a1ec;
+  //   }
+  //   50% {
+  //     color: #ff9bd5;
+  //   }
+  //   100% {
+  //     color: #f8946c;
+  //   }
+  // }
+  
 }
+
 .highlight{
   padding: 1px 5px 3px 5px;
   margin: 0 3px 0 5px;
