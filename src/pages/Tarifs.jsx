@@ -13,7 +13,7 @@ const Tarifs = () => {
       <div className="tarif__title">
         <h1>TARIFS</h1>
       </div>
-      <section class="hero-section">
+      <section className="hero-section">
         <div className="card-grid">
           {priceList?.map(
             ({
