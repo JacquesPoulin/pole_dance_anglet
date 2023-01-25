@@ -66,7 +66,7 @@ const Evjf = () => {
           </div>
           {/**** DEVIS ****/}
           <div className="evjf__button-container">
-            <button class="pulse">Devis immédiat</button>
+            <button className="pulse">Devis immédiat</button>
           </div>
         </div>
       </div>
