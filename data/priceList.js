@@ -63,7 +63,8 @@ const priceList = [
     tarif_stage: "",
 
     // ** lien pour en savoir plus **
-    info: "Réserver",
+    info: "RESERVER",
+    info2: "Besoin de Zen",
   },
   {
     id: 2,
@@ -87,7 +88,8 @@ const priceList = [
     tarif_stage: "25€/personne",
 
     // ** lien pour en savoir plus **
-    info: "Réserver",
+    info: "RESERVER",
+    info2: "Grâce & Souplesse",
   },
   {
     id: 3,
@@ -111,7 +113,8 @@ const priceList = [
     tarif_stage: "25€/personne",
 
     // ** lien pour en savoir plus **
-    info: "Réserver",
+    info: "RESERVER",
+    info2: "Moments inoubliables",
   },
   {
     id: 4,
@@ -135,7 +138,8 @@ const priceList = [
     tarif_stage: "",
 
     // ** lien pour en savoir plus **
-    info: "Réserver",
+    info: "RESERVER",
+    info2: "Renforcement musculaire",
   },
 ];
 

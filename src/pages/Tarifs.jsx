@@ -28,6 +28,7 @@ const Tarifs = () => {
               description_stage,
               tarif_stage,
               info,
+              info2,
             }) => (
               <div key={id} className="card" href="#">
                 <div
@@ -63,8 +64,12 @@ const Tarifs = () => {
                     {tarif_stage && <p>{tarif_stage}</p>}
                   </div>
                 </div>
-
-                {/* <button>{info && info}</button> */}
+                <div className="buttonContainer">
+                  <div className="button-57" role="button">
+                    <span className="text">{info}</span>
+                    <span>{info2}</span>
+                  </div>
+                </div>
               </div>
             )
           )}
