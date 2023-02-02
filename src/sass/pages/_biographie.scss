@@ -1,14 +1,19 @@
 .bio {
   width: 100%;
   height: 100vh;
-  
+
+ h1 {
+    padding: 5rem 0 5rem 0;
+    text-align: center;
+    color: aliceblue;
+  }
+
   &__buttons-container {
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 35rem;
   }
   &__arrow-container {
     width: 100%;
@@ -91,3 +96,9 @@
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
+#method {
+  margin-right: 30rem;
+}
+#parcours {
+  margin-left: 13rem;
+}

@@ -29,6 +29,7 @@ const Contact = () => {
 
   const handleName = (e) => {
     setName(e.target.value);
+    console.log(e.target.value);
   };
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
@@ -41,7 +42,7 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault()
     setName(useState(""));
     setFirstName(useState(""));
     setMail(useState(""));
@@ -64,10 +65,11 @@ const Contact = () => {
 
         {/* NOM */}
         <form
-          method="POST"
-          action="https://getform.io/f/efe185bd-ad41-4c2c-90f2-8afb415dcc17"
-          target="_blank"
+          // method="POST"
+          // action="https://getform.io/f/efe185bd-ad41-4c2c-90f2-8afb415dcc17"
+          // target="_blank"
           className="contact__form"
+          onSubmit={handleSubmit}
         >
           <TextField
             required
@@ -94,6 +96,7 @@ const Contact = () => {
             variant="standard"
             color="secondary"
             onChange={handleFirstName}
+            onSubmit={handleSubmit}
           />
 
           {/* MAIL */}
@@ -109,6 +112,7 @@ const Contact = () => {
             variant="standard"
             color="secondary"
             onChange={handleMail}
+            onSubmit={handleSubmit}
           />
 
           {/* MESSAGE */}
@@ -125,6 +129,7 @@ const Contact = () => {
             variant="standard"
             color="secondary"
             onChange={handleMessage}
+            onSubmit={handleSubmit}
           />
 
           {/* BOUTON ENVOYER */}
