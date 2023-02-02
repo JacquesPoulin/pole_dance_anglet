@@ -64,7 +64,7 @@ const priceList = [
 
     // ** lien pour en savoir plus **
     info: "RESERVER",
-    info2: "Besoin de Zen",
+    info2: "Zen & Harmonie",
   },
   {
     id: 2,
@@ -89,7 +89,7 @@ const priceList = [
 
     // ** lien pour en savoir plus **
     info: "RESERVER",
-    info2: "Grâce & Souplesse",
+    info2: "Grâce & souplesse",
   },
   {
     id: 3,

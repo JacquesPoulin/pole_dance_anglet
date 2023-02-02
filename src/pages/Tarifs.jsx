@@ -66,7 +66,7 @@ const Tarifs = () => {
                 </div>
                 <div className="buttonContainer">
                   <div className="button-57" role="button">
-                    <span className="text">{info}</span>
+                    {info && <span className="text">{info}</span>}
                     <span>{info2}</span>
                   </div>
                 </div>
@@ -80,10 +80,3 @@ const Tarifs = () => {
 };
 
 export default Tarifs;
-
-// style =
-//   "background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)";
-
-//  <Link to="Reserver">
-//    <button>Réserver</button>
-//  </Link>;
