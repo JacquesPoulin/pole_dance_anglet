@@ -1,7 +1,7 @@
 // >> LISTES DES TARIFS
 
 const styleYoga = {
-  backgroundImage: "url(../../../public/images/danse/IMG-20221124-WA0001.jpg)",
+  backgroundImage: "url(/images/danse/IMG-20221124-WA0001.jpg)",
   boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
   borderRadius: "10px",
   backgroundPosition: "center",
@@ -10,7 +10,7 @@ const styleYoga = {
 };
 
 const stylePole = {
-  backgroundImage: "url(../../../public/images/bar/IMG-20221124-WA0010.jpg)",
+  backgroundImage: "url(/images/bar/IMG-20221124-WA0010.jpg)",
   boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
   backdropFilter: "blur( 0px )",
   borderRadius: "10px",
@@ -20,7 +20,7 @@ const stylePole = {
 };
 
 const styleEVJF = {
-  backgroundImage: "url(../../../public/images/bar/IMG-20230102-WA0034.jpg)",
+  backgroundImage: "url(/images/bar/IMG-20230102-WA0034.jpg)",
   boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
   whiteFont: true,
   backdropFilter: "blur( 0px )",
@@ -30,7 +30,7 @@ const styleEVJF = {
 };
 
 const stylePilates = {
-  backgroundImage: "url(../../../public/images/danse/IMG-20221124-WA0008.jpg)",
+  backgroundImage: "url(/images/danse/IMG-20221124-WA0008.jpg)",
   boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
   backdropFilter: "blur( 0px )",
   borderRadius: "10px",

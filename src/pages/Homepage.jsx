@@ -43,7 +43,7 @@ const Homepage = () => {
       >
         <div className="homepage__arrow-container">
           <img
-            src="../../public/images/png/kisspng-arrow-computer-icons-logo-white-down-arrow-png-5ab1bd5cde13f0.7986932615215977889096.png"
+            src="/images/png/kisspng-arrow-computer-icons-logo-white-down-arrow-png-5ab1bd5cde13f0.7986932615215977889096.png"
             alt=""
           />
         </div>

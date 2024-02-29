@@ -7,6 +7,14 @@
     position: absolute;
     width: 100%;
     margin: 0 0 0 3rem;
+
+    &__contact {
+      width: 539px;
+      height: 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     
     &__text {
       width: 550px;

@@ -1,12 +1,12 @@
 .evjf {
   width: 100%;
-  background-image: url("../../../public/images/bar/IMG-20221124-WA0010.jpg");
+  background-image: url("/images/bar/IMG-20221124-WA0010.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
  h1 {
-    padding: 5rem 0 5rem 0;
+    padding: 4rem 0 5rem 0;
     text-align: center;
     color: aliceblue;
     z-index: 3;
@@ -67,6 +67,55 @@
     justify-content: flex-end;
     align-items: center;
   }  
+
+  &__form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    h3 {
+      color: aliceblue;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: aliceblue;
+      }
+
+      input, textarea {
+        margin-left: 1rem;
+        outline: none;
+        border-radius: 1rem;
+        border: 0;
+        font-size: 1.1rem;
+        padding: 1rem;
+        font-family: 'Quicksand', sans-serif;
+      }
+
+      input {
+        width: 30%;
+      }
+      
+      textarea {
+        width: 50%;
+      }
+    }
+  }
 }
 
 #opacity-effet {
@@ -114,4 +163,13 @@ button {
   margin: 0 3px 0 5px;
   border-radius: 10px;
   background-color: #bd46f5;
+}
+
+.clicked {
+  border: 2px solid #bd46f5 !important;
+}
+
+.toast-message {
+  width: 550px !important;
+  height: 50px !important;
 }

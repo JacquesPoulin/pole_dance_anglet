@@ -1,4 +1,58 @@
 .pilates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      text-align: justify;
+    }
+  }
+  
+  .gallery {
+    flex: 1;
+  
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .gallery img {
     width: 100%;
-    height: 100vh;
-}
+    margin-bottom: 10px;
+    border-radius: 1rem;
+  }
+  
+  .marketing-text {
+    flex: 1;
+    padding: 0 1rem;
+  
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+  
+  .marketing-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .marketing-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  .tarif-button {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pilates-title{
+    color:#72167e;
+  }

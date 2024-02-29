@@ -1,5 +1,8 @@
 import React from "react";
 
+// ! ----- Packages  -----
+import { Link } from "react-scroll";
+
 const Methode = () => {
   return (
     <div className="methode">
@@ -22,6 +25,18 @@ const Methode = () => {
             les cours sont ouverts à tous et chacun se fera plaisir dès les
             premiers cours.
           </p>
+        </div>
+        <div className="methode__text-container__contact">
+          <Link
+            activeClass="active"
+            to="Contact"
+            spy
+            smooth
+            isDynamic
+            duration={1000}
+          >
+            <button>Me contacter</button>
+          </Link>
         </div>
       </div>
     </div>

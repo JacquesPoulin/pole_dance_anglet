@@ -12,7 +12,9 @@ const navbar = () => {
       <nav className="navbar">
         <ul>
           <Link to="Accueil">
-            <h4>PoleDanceAnglet</h4>
+            <div className="navbar__titleContainer">
+              <h4>PoleDanceAnglet</h4>
+            </div>
           </Link>
           {navbarList?.map(({ id, title }) => (
             <Link
