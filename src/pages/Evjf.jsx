@@ -256,7 +256,7 @@ const Evjf = () => {
                   placeholder={
                     isInputFocused
                       ? ""
-                      : "Avez-vous une demande particulière ? N'hésitez pas 😊!!"
+                      : "Que souhaitez vous ?"
                   }
                   onChange={handleInputChange}
                   onFocus={handleInputFocus}
