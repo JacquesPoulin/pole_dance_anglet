@@ -1,5 +1,7 @@
 // ! *** IMPORTS & PACKAGES ***
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import configContact from "../utils/configContact.js"; // ? variables d'environnement
 
 // ! --- MUI PACKAGES ---
 import SendIcon from "@mui/icons-material/Send";
@@ -28,43 +30,65 @@ import {
 
 const Contact = () => {
   // ! *** STATES ***
-  const [name, setName] = useState("");
-  const [firstname, setFirstName] = useState("");
-  const [mail, setMail] = useState("");
-  const [message, setMessage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [formDataContact, setFormDataContact] = useState({
+    // État pour stocker les données du formulaire
+    name: "",
+    firstname: "",
+    mail: "",
+    message: "",
+  });
+
+  // ! *** VARIABLES ***
+  const { serviceId, templateId, userId } = configContact;
+
+  // ? Pattern for the email input
+  const EMAIL_REGEX = new RegExp(
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
 
   // ! *** FONCTIONS ***
-  const handleName = (e) => {
-    setName(e.target.value);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    // ? Met à jour l'état avec la nouvelle valeur du champ
+    setFormDataContact({ ...formDataContact, [name]: value });
   };
 
-  const handleFirstName = (e) => {
-    setFirstName(e.target.value);
+  // ? Soumission du formulaire
+  const handleSubmitFormContact = (event) => {
+    event.preventDefault();
+    console.log(userId, serviceId, templateId);
+    const { name, firstname, mail, message } = formDataContact;
+
+    const templateParams = {
+      to_name: "jacques.poulin64@gmail.com",
+      from_name: `${firstname} ${name}`,
+      reply_to: mail,
+      message: message,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log(response);
+        setShowPopup(true);
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        alert("Error sending email");
+      });
+
+    setFormDataContact({
+      name: "",
+      firstname: "",
+      mail: "",
+      message: "",
+    });
   };
 
-  const handleMail = (e) => {
-    setMail(e.target.value);
-  };
-
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Afficher la pop-up après l'envoi réussi
-    setShowPopup(true);
-
-    // ? Réinitialiser les champs après l'envoi
-    setName("");
-    setFirstName("");
-    setMail("");
-    setMessage("");
-  };
-
-  // ! >> RENDERING
+  // ! *** RENDERING ***
   return (
     <div name="Contact" className="contact">
       <h1>Contact</h1>
@@ -80,38 +104,34 @@ const Contact = () => {
 
         <form
           method="POST"
-          action="https://getform.io/f/efe185bd-ad41-4c2c-90f2-8afb415dcc17"
-          target="_blank"
           className="contact__form"
-          onSubmit={handleSubmit}
+          onSubmit={handleSubmitFormContact}
         >
           {/* NOM */}
           <TextField
             required
             id="nom"
             label="Nom"
-            value={name}
-            name="nom"
+            value={formDataContact.name}
+            name="name"
             type="text"
             autoComplete="off"
             variant="standard"
             color="secondary"
-            onChange={handleName}
+            onChange={handleInputChange}
           />
 
           {/* PRENOM */}
           <TextField
-            required
             id="prénom"
             label="Prénom"
-            value={firstname}
-            name="prénom"
+            value={formDataContact.firstname}
+            name="firstname"
             type="text"
             autoComplete="off"
             variant="standard"
             color="secondary"
-            onChange={handleFirstName}
-            onSubmit={handleSubmit}
+            onChange={handleInputChange}
           />
 
           {/* MAIL */}
@@ -119,15 +139,14 @@ const Contact = () => {
             required
             id="email"
             label="Email"
-            value={mail}
+            value={formDataContact.mail}
             name="mail"
             type="email"
             placeholder="exemple@gmail.com"
             autoComplete="off"
             variant="standard"
             color="secondary"
-            onChange={handleMail}
-            onSubmit={handleSubmit}
+            onChange={handleInputChange}
           />
 
           {/* MESSAGE */}
@@ -135,7 +154,7 @@ const Contact = () => {
             required
             id="message"
             label="Message"
-            value={message}
+            value={formDataContact.message}
             name="message"
             type="text"
             autoComplete="off"
@@ -143,8 +162,7 @@ const Contact = () => {
             rows={5}
             variant="standard"
             color="secondary"
-            onChange={handleMessage}
-            onSubmit={handleSubmit}
+            onChange={handleInputChange}
           />
 
           {/* BOUTON ENVOYER */}
@@ -154,11 +172,11 @@ const Contact = () => {
             variant="none"
             endIcon={<SendIcon />}
             type="submit"
-            onSubmit={handleSubmit}
           >
             Envoyer
           </Button>
         </form>
+
         {/* Pop-up de confirmation */}
         <Dialog open={showPopup} onClose={() => setShowPopup(false)}>
           <DialogTitle>Message envoyé !</DialogTitle>

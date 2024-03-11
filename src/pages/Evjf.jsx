@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Alert, { Flip } from "../utils/Alert";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import configDevis from "../utils/configDevis.js"; // ? variables d'environnement
 import emailjs from "emailjs-com";
 
 // ! --- MUI PACKAGES ---
@@ -30,6 +31,14 @@ const Evjf = () => {
     specialRequests: "",
   });
 
+  // ! *** VARIABLES ***
+  const { serviceId, templateId, userId } = configDevis;
+
+  // ? Pattern for the email input
+  const EMAIL_REGEX = new RegExp(
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+
   // ! *** FONCTIONS ***
   const handleToggleForm = () => {
     setIsFormVisible((prev) => !prev);
@@ -37,30 +46,53 @@ const Evjf = () => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    // ? Vérifie si le champ est "participantCount" et si la valeur est négative
-    if (name === "participantCount" && parseInt(value) < 2) {
-      // ? Si c'est le cas, ignore la mise à jour de l'état
-      return;
-    }
+
     // ? Met à jour l'état avec la nouvelle valeur du champ
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  // ? Soumission du formulaire
+  const handleSubmitFormEvjf = (event) => {
     event.preventDefault();
+    console.log(userId, serviceId, templateId);
+    const { brideName, participantCount, contactMail, specialRequests } =
+      formData;
 
-    toast.success("Demande de devis envoyée !", {
-      position: "top-center",
-      className: "toast-message",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      theme: "light",
-      transition: Flip,
-    });
-    
+    const templateParams = {
+      to_name: "jacques.poulin64@gmail.com",
+      from_name: brideName,
+      reply_to: contactMail,
+      message: `
+          Nom de la mariée : ${brideName}\n
+          Nombre de participant : ${participantCount}\n
+          Email de contact : ${contactMail}\n
+          Demande particulière :\n\n${specialRequests}\n
+        `,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log(response);
+        toast.success("Demande de devis envoyée !", {
+          position: "top-center",
+          className: "toast-message",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+          transition: Flip,
+        });
+        // Masquer le formulaire après l'envoi réussi
+        setIsFormVisible(false);
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        alert("Error sending email");
+      });
+
     setFormData({
       brideName: "",
       participantCount: "",
@@ -165,13 +197,13 @@ const Evjf = () => {
                 de pole dance tonifie et renforce vos muscles en profondeur.
               </li>
 
-              <li>
+              {/* <li>
                 <span>
                   <u>Sensualité</u>
                 </span>
                 ↪ Impressionnez le futur marié en dévoilant votre nouvelle
                 confiance en vous et votre élégance, acquises lors de ce cours.
-              </li>
+              </li> */}
 
               <li>
                 <span>
@@ -198,12 +230,7 @@ const Evjf = () => {
         {isFormVisible && (
           <div className="evjf__form-container">
             <h3>Demande de devis</h3>
-            <form
-              method="POST"
-              action="https://getform.io/f/efe185bd-ad41-4c2c-90f2-8afb415dcc17"
-              target="_blank"
-              onSubmit={handleSubmit}
-            >
+            <form method="POST" onSubmit={handleSubmitFormEvjf}>
               <label>
                 Nom complet de la mariée :
                 <input
@@ -228,7 +255,6 @@ const Evjf = () => {
                   onClick={() => handleInputClick("participantCount")}
                   className={isParticipantCountClicked ? "clicked" : ""}
                   placeholder="Insérez un nombre"
-                  min="2"
                   required
                 />
               </label>
@@ -236,7 +262,7 @@ const Evjf = () => {
               <label>
                 Mail de contact :
                 <input
-                  type="mail"
+                  type="email"
                   name="contactMail"
                   value={formData.contactMail}
                   onChange={handleInputChange}
@@ -254,9 +280,7 @@ const Evjf = () => {
                   name="specialRequests"
                   value={formData.specialRequests}
                   placeholder={
-                    isInputFocused
-                      ? ""
-                      : "Que souhaitez vous ?"
+                    isInputFocused ? "" : "Une demande particulère ?"
                   }
                   onChange={handleInputChange}
                   onFocus={handleInputFocus}
