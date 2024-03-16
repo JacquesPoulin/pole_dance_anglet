@@ -106,7 +106,7 @@ const priceList = [
 
     //  ** Cours pour 2 personnes **
     description_collectif: "OFFERT pour la mariée --->",
-    tarif_collectif: "...Dès 6 personnes",
+    tarif_collectif_special: "...Dès 6 personnes",
 
     //  ** stage **
     description_stage: "Stage de pole dance",
