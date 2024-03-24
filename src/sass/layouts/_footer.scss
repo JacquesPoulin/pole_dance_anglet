@@ -5,7 +5,7 @@
   &__line {
     width: 100%;
     height: 1px;
-    background-color: #72167e;
+    background-color: #f5f5f5;
   }
   &__contacts {
     display: flex;
@@ -15,13 +15,13 @@
   }
 
   p {
-    color: #72167e;
+    color: #f5f5f5;
     letter-spacing: 2px;
     text-align: center;
   }
 
   a {
-    color: #72167e;
+    color: #f5f5f5;
     letter-spacing: 2px;
     text-align: center;
     cursor: pointer;
@@ -37,7 +37,7 @@
 #socials {
   width: 2rem;
   height: 2rem;
-  color: #72167e;
+  color: #f5f5f5;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 

@@ -33,7 +33,7 @@ const Yoga = () => {
               spy
               smooth
               isDynamic
-              duration={1000}
+              duration={500}
             >
               <button>Voir les tarifs</button>
             </Link>

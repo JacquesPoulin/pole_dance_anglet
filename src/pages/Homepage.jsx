@@ -39,7 +39,7 @@ const Homepage = () => {
         spy
         smooth
         isDynamic
-        duration={1000}
+        duration={500}
       >
         <div className="homepage__arrow-container">
           <img

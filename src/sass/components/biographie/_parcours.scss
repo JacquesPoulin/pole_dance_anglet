@@ -1,38 +1,56 @@
 .parcours {
-  position: absolute;
   min-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   
-  &__text-container {
-    position: absolute;
-    width: 100%;
-    margin: 3rem 0 0 3rem;
+  &__text-containers {
+    width: 80%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba(62, 31, 135, 0.37);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 1rem;
+
+    ul {
+      overflow-y: auto;
+      max-height: 100%;
+      margin-top: -3rem;
+    }
+
+    ul::-webkit-scrollbar {
+      width: 2px; /* Largeur de la barre de défilement */
+      background-image: linear-gradient(#ffffff, #ffffff); /* Dégradé de couleur de fond */
+      border-radius: 10px; /* Bordure arrondie */
+    }
     
-    &__text {
-      width: 550px;
-      background: rgba( 255, 255, 255, 0.4 );
-      box-shadow: 0 8px 32px 0 rgba(62, 31, 135, 0.37);
-      backdrop-filter: blur( 0px );
-      -webkit-backdrop-filter: blur( 0px );
-      border-radius: 10px;
-      border: 1px solid rgba( 255, 255, 255, 0.18 );
-      padding: 1rem;
+    ul::-webkit-scrollbar-thumb {
+      background: #84378d; /* Couleur de la barre de défilement */
+      border-radius: 10px; /* Bordure arrondie */
+    }
 
-      li {
-        margin: 0;
-        font-size: 1rem;
-        padding: 0.5rem 0 0.5rem 2rem;
-        font-weight: 500;
-        text-align: justify;
-        line-height: 20px;
-        text-justify: inter-word;
-        list-style: none;
-        background-image: url("/images/svg/right-arrow-svgrepo-com.svg");
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 20px;
-        cursor: text;
-      }
-
+    li {
+      margin: 0;
+      font-size: 1rem;
+      padding: 0.5rem 0 0.5rem 2rem;
+      font-weight: 500;
+      text-align: justify;
+      line-height: 20px;
+      text-justify: inter-word;
+      list-style: none;
+      background-image: url("/images/svg/right-arrow-svgrepo-com.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 20px;
+      cursor: text;
     }
   }
 }

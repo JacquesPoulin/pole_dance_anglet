@@ -1,20 +1,30 @@
-.bio {
+.biographie {
   width: 100%;
   height: 100vh;
 
  h1 {
-    padding: 0.2rem 0 0 0;
     text-align: center;
-    color: #72167e;
+    color: #84378d;
   }
 
-  &__buttons-container {
+  &__container-left {
     width: 100%;
     min-height: 200px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
+  
+  &__container-right {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__arrow-container {
     width: 100%;
     margin-top: 22rem;
@@ -35,13 +45,20 @@
       }
     }
   }
-  &__components {
-    position: absolute;
+
+  &__cta-button-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -1.2rem;
   }
+}
+
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // >> PARALLAX EFFECT
@@ -54,51 +71,89 @@
   backdrop-filter: blur(5px);
 }
 
-// >> BUTTONS EFFECTS
+  // >> BUTTON
+  .original-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -0.02rem;
+    line-height: 1;
+    text-decoration: none;
+    color: #84378d;
+    font-size: 18px;
+    border-radius: 0px;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    transition: 0.3s;
+    background-color: #ffffff;
+    cursor: none;
+  }
+  
+  .original-button::before, .original-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #84378d;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+  }
+  
+  .original-button::before {
+    top: -2px;
+    left: -2px;
+  }
+  
+  .original-button::after {
+    top: 2px;
+    left: 2px;
+  }
+  
+  .original-button:hover::before, .original-button:hover::after {
+    top: 0;
+    left: 0;
+  }
 
-.button {
-  align-self: center;
-  background-color: #fff;
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-  box-sizing: border-box;
-  color: #41403e;
-  display: inline-block;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 2.5rem;
-  line-height: 23px;
-  outline: none;
-  padding: .75rem;
-  text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  cursor: none;
-}
-
-.button:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
-}
-
-.button:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-}
-
-#method {
-  margin-right: 20rem;
-}
-#parcours {
-  margin-left: 13rem;
-}
+  .original-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.2rem;
+    line-height: 1;
+    text-decoration: none;
+    color: #84378d;
+    font-size: 18px;
+    border-radius: 0px;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    transition: 0.3s;
+    background-color: #ffffff;
+    cursor: none;
+  }
+  
+  .original-button2::before, .original-button2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #84378d;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+  }
+  
+  .original-button2::before {
+    top: -2px;
+    left: -2px;
+  }
+  
+  .original-button2::after {
+    top: 2px;
+    left: 2px;
+  }
+  
+  .original-button2:hover::before, .original-button2:hover::after {
+    top: 0;
+    left: 0;
+  }
