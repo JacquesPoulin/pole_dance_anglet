@@ -1,8 +1,5 @@
 import React from "react";
 
-// ! ----- Packages  -----
-import { Link } from "react-scroll";
-
 const Methode = () => {
   return (
     <div className="methode">

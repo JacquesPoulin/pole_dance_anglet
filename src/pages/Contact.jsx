@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import configContact from "../utils/configContact.js"; // ? variables d'environnement
+import { Link } from "react-scroll";
 
 // ! --- MUI PACKAGES ---
 import SendIcon from "@mui/icons-material/Send";
@@ -11,6 +12,9 @@ import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
+
+// ! --- FONTAWESOME PACKAGES ---
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // ! ------ Pattern for the email input ------
 const EMAIL_REGEX = new RegExp(
@@ -194,6 +198,30 @@ const Contact = () => {
             </Button>
           </DialogActions>
         </Dialog>
+      </div>
+      <div className="contact__navbar">
+        {/* REVENIR AU DÉBUT */}
+        <Link
+          activeClass="active"
+          to="Accueil"
+          spy
+          smooth
+          isDynamic
+          duration={200}
+        >
+          <p title="Revenir au début">Accueil</p>
+          {/* <FontAwesomeIcon icon="fa-solid fa-house" /> */}
+        </Link>
+        <Link
+          activeClass="active"
+          to="Tarifs"
+          spy
+          smooth
+          isDynamic
+          duration={200}
+        >
+          <p title="Voir les tarifs">Tarifs</p>
+        </Link>
       </div>
     </div>
   );

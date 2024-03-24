@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // ----- Packages  -----
 import { Typewriter } from "react-simple-typewriter";
@@ -8,9 +8,9 @@ const Homepage = () => {
   // ! ***** RENDERING ******
   return (
     <div name="Accueil" className="homepage">
-      <video id="background-video" autoPlay loop muted playsInline>
+      {/* <video id="background-video" autoPlay loop muted playsInline>
         <source src="/videos/sonia_pole_landing.mp4" type="video/mp4" />
-      </video>
+      </video> */}
 
       <div className="homepage__presentation">
         <h2>Sonia KERKENI</h2>
