@@ -65,6 +65,7 @@ const priceList = [
     // ** lien pour en savoir plus **
     info: "RESERVER",
     info2: "Zen & Harmonie",
+    lienPaiement: "https://book.stripe.com/fZeaGN9yC2tZfPa144",
   },
   {
     id: 2,
@@ -90,6 +91,7 @@ const priceList = [
     // ** lien pour en savoir plus **
     info: "RESERVER",
     info2: "Grâce & souplesse",
+    lienPaiement: "https://book.stripe.com/dR616ddOSb0v46sbIJ",
   },
   {
     id: 3,

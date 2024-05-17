@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-// ----- Packages  -----
+// ! ----- Packages  -----
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 
+
 const Homepage = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleMenuToggle = () => {
+    setShowMenu(!showMenu);
+  };
+
   // ! ***** RENDERING ******
   return (
     <div name="Accueil" className="homepage">
-      {/* <video id="background-video" autoPlay loop muted playsInline>
+      <video id="background-video" autoPlay loop muted playsInline>
         <source src="/videos/sonia_pole_landing.mp4" type="video/mp4" />
-      </video> */}
+      </video>
 
       <div className="homepage__presentation">
         <h2>Sonia KERKENI</h2>

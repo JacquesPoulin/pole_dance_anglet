@@ -31,7 +31,21 @@
 	&__column {
 		display: flex;
 		flex-direction: column;
-		width: 25%;
+		width: 100%; /* Ajuste à 100% pour que les colonnes prennent toute la largeur */
+		padding: 5px;
+		box-sizing: border-box;
+
+		@media (min-width: 600px) {
+			width: 50%; /* Deux colonnes sur les écrans moyens */
+		}
+
+		@media (min-width: 900px) {
+			width: 33.33%; /* Trois colonnes sur les grands écrans */
+		}
+
+		@media (min-width: 1200px) {
+			width: 25%; /* Quatre colonnes sur les très grands écrans */
+		}
 	}
 	
 	&__link {

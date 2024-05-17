@@ -1,7 +1,11 @@
 .navbar {
-  position: absolute;
   min-width: 100%;
   min-height: 6.5rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(70px);
   transition: all 0.1s linear;
@@ -21,9 +25,9 @@
   ul {
     min-width: 100%;
     height: 2rem;
-    margin-top: 2rem;
+    margin: 1rem auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     outline: none;
 
@@ -31,13 +35,13 @@
       height: 100%;
       position: relative;
       display: block;
-      font-family: 'Quicksand', sans-serif;
+      font-family: "Quicksand", sans-serif;
       font-size: 17px;
       font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #3c6fb6;
+      color: #f6f3ff;
       text-transform: uppercase;
       text-align: center;
       padding: 10px 10px;
@@ -53,8 +57,8 @@
         border: 0px solid transparent;
         width: 120%;
         height: 0%;
-        border-left: 2px solid #fff;
-        border-right: 2px solid #fff;
+        border-left: 2px solid #f6f3ff;
+        border-right: 2px solid #f6f3ff;
         transition: all 0.3s ease;
       }
       &::after {
@@ -64,28 +68,24 @@
         border: 0px solid transparent;
         width: 0%;
         height: 80%;
-        border-top: 2px solid #fff;
-        border-bottom: 2px solid #fff;
+        border-top: 2px solid #f6f3ff;
+        border-bottom: 2px solid #f6f3ff;
         transition: all 0.1s ease;
       }
       &:hover {
         &::before {
           height: 80%;
         }
-      }
-      &:hover {
         &::after {
           width: 120%;
         }
       }
     }
-    
-    /* animation: colorChange 8s ease-in-out infinite alternate; */
+
     @keyframes colorChange {
       0% {
         color: #668ada;
       }
-      
       25% {
         color: #c745be;
       }
@@ -96,21 +96,79 @@
         color: #f5f5f5;
       }
     }
-  
-    @keyframes colorChange {
-        0% {
-          color: #668ada;
-        }
-        
-        25% {
-          color: #c745be;
-        }
-        50% {
-          color: #3c6fb6;
-        }
-        100% {
-          color: #f5f5f5;
-        }
-      }
   }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Ajoute un fond semi-transparent */
+    backdrop-filter: blur(10px); /* Ajoute un effet de flou */
+    z-index: 9999; /* Assure que la navbar est au-dessus de tout */
+  }
+
+  .burger-menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 2; /* Assure que le burger menu est au-dessus du fond */
+    background-color: #bb86fc;
+    color: #f0f8ff;
+    visibility: visible; /* Rend le hamburger menu visible par défaut */
+  }
+
+  .navbar__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1; /* Assure que les liens sont au-dessus du fond */
+  }
+
+  .navbar__links li {
+    margin: 0.3rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__links li a {
+    padding: 0.5rem 2rem;
+    display: block;
+    width: 100%;
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Retire les soulignements des liens */
+  }
+
+  .navbar__titleContainer {
+    display: none; /* Fait disparaître le titre en version mobile */
+  }
+
+  /* Ajoute cette règle pour retirer le blur et le fond transparent lorsque le menu est fermé */
+  .navbar.closed {
+    visibility: hidden;
+  }
+
+  .navbar.closed .burger-menu {
+    visibility: visible; /* Cache le hamburger menu lorsque la navbar est fermée */
+  }
+}
+
+@media (min-width: 767px) {
+  .navbar__links {
+    display: flex !important; /* Afficher les liens de navigation sur les bureaux */
+  }
+}
+
+.menu-open {
+  overflow: hidden; /* Empêche le défilement lorsque le menu est ouvert */
 }

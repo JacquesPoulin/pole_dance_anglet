@@ -3,7 +3,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+
   &__text-containers {
     width: 80%;
     height: 25rem;
@@ -12,12 +12,12 @@
     align-items: center;
     justify-content: center;
     text-align: justify;
-    background: rgba( 255, 255, 255, 0.4 );
+    background: rgba(255, 255, 255, 0.4);
     box-shadow: 0 8px 32px 0 rgba(62, 31, 135, 0.37);
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 1rem;
 
     ul {
@@ -28,10 +28,13 @@
 
     ul::-webkit-scrollbar {
       width: 2px; /* Largeur de la barre de défilement */
-      background-image: linear-gradient(#ffffff, #ffffff); /* Dégradé de couleur de fond */
+      background-image: linear-gradient(
+        #ffffff,
+        #ffffff
+      ); /* Dégradé de couleur de fond */
       border-radius: 10px; /* Bordure arrondie */
     }
-    
+
     ul::-webkit-scrollbar-thumb {
       background: #84378d; /* Couleur de la barre de défilement */
       border-radius: 10px; /* Bordure arrondie */
@@ -52,5 +55,22 @@
       background-size: 20px;
       cursor: text;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .parcours {
+    flex-direction: column; /* Changer la direction des éléments pour une disposition en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+  }
+
+  .parcours__text-containers {
+    width: 90%; /* Réduire la largeur du conteneur */
+    height: auto; /* Permettre au conteneur de s'adapter à la taille du contenu */
+    margin-bottom: 2rem; /* Ajouter un peu d'espace en bas */
+  }
+
+  ul {
+    margin-top: -1rem; /* Ajuster la marge supérieure de la liste */
   }
 }

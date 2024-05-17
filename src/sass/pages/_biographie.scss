@@ -1,8 +1,9 @@
 .biographie {
+  position: relative;
   width: 100%;
   height: 100vh;
 
- h1 {
+  h1 {
     text-align: center;
     color: #84378d;
   }
@@ -15,7 +16,7 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   &__container-right {
     width: 100%;
     min-height: 200px;
@@ -39,9 +40,9 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       &:hover {
-      border-radius: 50%;
-      padding: 5px;
-      background-color: #8dc7fa
+        border-radius: 50%;
+        padding: 5px;
+        background-color: #8dc7fa;
       }
     }
   }
@@ -52,6 +53,7 @@
     justify-content: center;
     align-items: center;
     margin-top: -1.2rem;
+    z-index: 99;
   }
 }
 
@@ -71,89 +73,122 @@
   backdrop-filter: blur(5px);
 }
 
-  // >> BUTTON
-  .original-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -0.02rem;
-    line-height: 1;
-    text-decoration: none;
-    color: #84378d;
-    font-size: 18px;
-    border-radius: 0px;
-    width: 200px;
-    height: 40px;
-    position: relative;
-    transition: 0.3s;
-    background-color: #ffffff;
-    cursor: none;
+// >> BUTTON
+.original-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.02rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #84378d;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 200px;
+  height: 40px;
+  position: relative;
+  transition: 0.3s;
+  background-color: #ffffff;
+  cursor: none;
+}
+
+.original-button::before,
+.original-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid #84378d;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.original-button::before {
+  top: -2px;
+  left: -2px;
+}
+
+.original-button::after {
+  top: 2px;
+  left: 2px;
+}
+
+.original-button:hover::before,
+.original-button:hover::after {
+  top: 0;
+  left: 0;
+}
+
+.original-button2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+  line-height: 1;
+  text-decoration: none;
+  color: #84378d;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 200px;
+  height: 40px;
+  position: relative;
+  transition: 0.3s;
+  background-color: #ffffff;
+  cursor: none;
+}
+
+.original-button2::before,
+.original-button2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid #84378d;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.original-button2::before {
+  top: -2px;
+  left: -2px;
+}
+
+.original-button2::after {
+  top: 2px;
+  left: 2px;
+}
+
+.original-button2:hover::before,
+.original-button2:hover::after {
+  top: 0;
+  left: 0;
+}
+
+/* Media queries pour les écrans de taille moyenne et petite */
+@media (max-width: 1900px) {
+  .biographie {
+    padding-bottom: 63rem;
   }
-  
-  .original-button::before, .original-button::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border: 1px solid #84378d;
-    width: 100%;
-    height: 100%;
-    transition: .3s;
+}
+
+/* Media queries pour les écrans de taille moyenne et petite */
+@media (max-width: 1600px) {
+  .biographie {
+    padding-bottom: 63rem;
   }
-  
-  .original-button::before {
-    top: -2px;
-    left: -2px;
-  }
-  
-  .original-button::after {
-    top: 2px;
-    left: 2px;
-  }
-  
-  .original-button:hover::before, .original-button:hover::after {
-    top: 0;
-    left: 0;
+}
+
+/* Media queries pour les écrans de taille moyenne et petite */
+@media (max-width: 1050px) {
+  .containers {
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 1rem;
   }
 
-  .original-button2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1.2rem;
-    line-height: 1;
-    text-decoration: none;
-    color: #84378d;
-    font-size: 18px;
-    border-radius: 0px;
-    width: 200px;
-    height: 40px;
-    position: relative;
-    transition: 0.3s;
-    background-color: #ffffff;
-    cursor: none;
+  .biographie__cta-button-container {
+    bottom: 0;
+    left: 50%;
+    margin-top: 1rem;
   }
-  
-  .original-button2::before, .original-button2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border: 1px solid #84378d;
-    width: 100%;
-    height: 100%;
-    transition: .3s;
-  }
-  
-  .original-button2::before {
-    top: -2px;
-    left: -2px;
-  }
-  
-  .original-button2::after {
-    top: 2px;
-    left: 2px;
-  }
-  
-  .original-button2:hover::before, .original-button2:hover::after {
-    top: 0;
-    left: 0;
-  }
+}

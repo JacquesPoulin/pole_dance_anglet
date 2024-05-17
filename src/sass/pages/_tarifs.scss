@@ -7,6 +7,7 @@
     color: #f5f5f5;
     z-index: 3;
   }
+
   &__title {
     width: 100%;
     display: flex;
@@ -14,12 +15,13 @@
     align-items: center;
     margin: 2rem;
   }
+
   &__description {
     width: 100%;
     text-align: center;
 
     p {
-      margin-top: -1rem;
+      margin: -1rem 0 3rem 0;
     }
   }
 }

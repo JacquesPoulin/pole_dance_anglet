@@ -67,6 +67,7 @@ const Tarifs = () => {
               tarif_stage,
               info,
               info2,
+              lienPaiement,
             }) => (
               <div key={id} className="card" href="#">
                 <div
@@ -109,7 +110,7 @@ const Tarifs = () => {
                 <div className="buttonContainer">
                   {/* Bouton RESERVER */}
                   <a
-                    href="https://book.stripe.com/dR616ddOSb0v46sbIJ"
+                    href={lienPaiement}
                     target="_blank"
                     title="Réserver votre cours"
                   >

@@ -1,10 +1,10 @@
 .contact {
   width: 100%;
   height: 100vh;
-  margin-top: 2rem;
+  margin-top: 7rem;
 
- h1 {
-    padding: 3rem 0 5rem 0;
+  h1 {
+    padding: 6rem 0 5rem 0;
     text-align: center;
     color: #f5f5f5;
   }
@@ -36,9 +36,9 @@
     border-radius: 20px;
   }
 
-  &__navbar {
+  &__cta-navbar {
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
@@ -49,6 +49,10 @@
       font-size: 1.5rem;
       letter-spacing: 0.5rem;
       color: #f6f3ff;
+
+      &:hover {
+        color: #d5c8fa;
+      }
     }
   }
 
@@ -59,5 +63,13 @@
     &:hover {
       color: rgb(86, 44, 99);
     }
+  }
+}
+
+/* Media queries pour les écrans de taille moyenne et petite */
+@media (max-width: 1000px) {
+  .contact {
+    position: relative;
+    padding-bottom: 3rem;
   }
 }
