@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import configContact from "../utils/configContact.js"; // ? variables d'environnement
 import { Link } from "react-scroll";
-import { useMediaQuery } from "react-responsive";
 
 // ! --- MUI PACKAGES ---
 import SendIcon from "@mui/icons-material/Send";
@@ -23,7 +22,12 @@ const EMAIL_REGEX = new RegExp(
 );
 
 // ! *** VARIABLES DES MEDIA QUERIES ***
-const isTabletOrMobile = useMediaQuery({ query: "(max-width: 992px)" });
+const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
+const isDesktop = useMediaQuery({ minWidth: 992 });
+const isMobile = useMediaQuery({ maxWidth: 767 });
+const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1px)" });
+const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
 
 // ! ----- react-toastify Components  -----
 import "react-toastify/dist/ReactToastify.css";
