@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import configContact from "../utils/configContact.js"; // ? variables d'environnement
 import { Link } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
 
 // ! --- MUI PACKAGES ---
 import SendIcon from "@mui/icons-material/Send";
