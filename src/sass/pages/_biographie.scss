@@ -65,12 +65,12 @@
 
 // >> PARALLAX EFFECT
 .parallax {
-  background-image: url("images/portrait/IMG-20221124-WA0025.jpg");
-  background-attachment: fixed;
+  background-image: url("/images/portrait/IMG-20221124-WA0025.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(5px);
+  background-attachment: fixed;
 }
 
 // >> BUTTON
