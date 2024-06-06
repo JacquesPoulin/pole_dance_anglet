@@ -59,7 +59,7 @@ const Evjf = () => {
       formData;
 
     const templateParams = {
-      to_name: "jacques.poulin64@gmail.com",
+      to_name: "soniadancer0@gmail.com",
       from_name: brideName,
       reply_to: contactMail,
       message: `
@@ -221,7 +221,7 @@ const Evjf = () => {
             {isFormVisible ? (
               <button onClick={handleToggleForm}>Masquer le devis</button>
             ) : (
-              <button onClick={handleToggleForm}>Devis immédiat</button>
+              <button onClick={handleToggleForm}>DEVIS</button>
             )}
           </div>
         </div>

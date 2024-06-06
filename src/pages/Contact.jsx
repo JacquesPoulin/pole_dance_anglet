@@ -71,7 +71,7 @@ const Contact = () => {
     const { name, firstname, mail, message } = formDataContact;
 
     const templateParams = {
-      to_name: "jacques.poulin64@gmail.com",
+      to_name: "soniadancer0@gmail.com",
       from_name: `${firstname} ${name}`,
       reply_to: mail,
       message: message,

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 // --- DATAS ---
 import galleryList from "../../data/galleryList";
@@ -7,6 +8,22 @@ const Galerie = () => {
   return (
     <div name="Galerie" className="gallerie">
       <div>
+        <div className="arrowUp">
+          <Link
+            activeClass="active"
+            to="Accueil"
+            spy
+            smooth
+            isDynamic
+            duration={1000}
+          >
+            <img
+              src="/images/svg/arrow-up-circle-svgrepo-com.svg"
+              alt="Flèche pour revenir à l'accueil"
+              title="Revenir à l'accueil"
+            />
+          </Link>
+        </div>
         <h1 className="gallerie__title">Galerie</h1>
       </div>
 
