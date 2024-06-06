@@ -6,13 +6,15 @@ import { Link } from "react-scroll";
 const Pilates = () => {
   return (
     <>
-      <h1 name="Pilates" className="pilates-title">Pilates</h1>
+      <h1 name="Pilates" className="pilates-title">
+        Pilates
+      </h1>
       <div className="pilates">
         <div className="gallery">
           {/* Insère ici ta galerie d'images */}
           <img src="/images/danse/IMG-20221124-WA0008.jpg" alt="Pilates" />
         </div>
-        <div className="marketing-text">
+        <div className="marketing">
           <h3>Pourquoi choisir le Pilates ?</h3>
           <p>
             Le Pilates est une méthode d'exercice qui vise à renforcer le corps

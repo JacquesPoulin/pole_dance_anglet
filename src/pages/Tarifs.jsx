@@ -1,48 +1,10 @@
 // ! *** IMPORTS & PACKAGES ***
-import React, { useState } from "react";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
-import CheckoutForm from "../components/CheckoutForm";
-import { Link } from "react-scroll";
-import { Button, Modal, Typography } from "@mui/material";
 
 // ! --- DATAS ---
 import priceList from "../../data/priceList";
-
-// loadStripe.setLoadParameters({advancedFraudSignals: false});
-// const stripePromise = await loadStripe(
-//   "pk_test_51Ov0uq2NE01lOuIpR3sSqY3J74BpzUmeJkCGKqSORklBB3YZbPJboj44ye7odatcqRnhTK4qpCOQa5GqmTaJJr8f001urF155p"
-// );
+import { Link } from "react-scroll";
 
 const Tarifs = () => {
-  // const [openModal, setOpenModal] = useState(false);
-  // const [selectedCardId, setSelectedCardId] = useState(null);
-
-  // const handleOpenModal = (id) => {
-  //   setSelectedCardId(id);
-  //   setOpenModal(true);
-  // };
-
-  // const handleCloseModal = () => {
-  //   setOpenModal(false);
-  // };
-
-  // const getTotalAmount = (selectedCardId) => {
-  //   // Recherchez le montant correspondant à l'ID de la carte sélectionnée
-  //   const selectedCard = priceList.find((card) => card.id === selectedCardId);
-  //   if (selectedCard) {
-  //     // Si la carte est trouvée, retournez le montant
-  //     return (
-  //       selectedCard.tarif_cours ||
-  //       selectedCard.tarif_collectif ||
-  //       selectedCard.tarif_stage ||
-  //       0
-  //     );
-  //   } else {
-  //     return 0;
-  //   }
-  // };
-
   return (
     <div name="Tarifs" className="tarif">
       {/* TITLE */}
@@ -65,9 +27,11 @@ const Tarifs = () => {
               tarif_collectif_special,
               description_stage,
               tarif_stage,
+              description_trimestre,
+              tarif_trimestre,
               info,
               info2,
-              lienPaiement,
+              // lienPaiement,
             }) => (
               <div key={id} className="card" href="#">
                 <div
@@ -106,68 +70,44 @@ const Tarifs = () => {
                     )}
                     {tarif_stage && <p>{tarif_stage}</p>}
                   </div>
+                  <div className="tarifs">
+                    {description_trimestre && (
+                      <p className="card__heading" title="Soit 16€/cours">
+                        {description_trimestre}
+                      </p>
+                    )}
+                    {tarif_trimestre && <p>{tarif_trimestre}</p>}
+                  </div>
                 </div>
                 <div className="buttonContainer">
-                  {/* Bouton RESERVER */}
-                  <a
-                    href={lienPaiement}
-                    target="_blank"
-                    title="Réserver votre cours"
+                  {/* Bouton CONTACT */}
+                  <Link
+                    activeClass="active"
+                    to="Contact"
+                    spy
+                    smooth
+                    isDynamic
+                    duration={500}
                   >
-                    <div
-                      className="button-57"
-                      role="button"
-                      // onClick={() => handleOpenModal(id)}
-                    >
+                    <div className="button-57" role="button">
                       {info && <span className="text">{info}</span>}
                       <span>{info2}</span>
                     </div>
-                  </a>
+                  </Link>
+                  {/* <a
+                    href={lienPaiement}
+                    target="_blank"
+                    title="N'hésitez pas à me contacter"
+                  >
+                  </a> */}
                 </div>
               </div>
             )
           )}
         </div>
       </section>
-      <div className="tarif__description">
-        <p>
-          La réservation correspond à un acompte de 15 euros, requis afin de
-          sécuriser votre place.
-        </p>
-        <p>
-          Cet acompte vous assure une réservation ferme et me permet de mieux
-          organiser mes cours pour vous offrir la meilleure expérience possible.
-        </p>
-      </div>
     </div>
   );
 };
 
 export default Tarifs;
-
-{
-  /* Modal de paiement */
-}
-{
-  /* <Modal
-open={openModal}
-onClose={handleCloseModal}
-aria-labelledby="modal-title"
-aria-describedby="modal-description"
-className="custom-modal"
->
-<div className="modal-content">
-  <Typography variant="h4" id="modal-title">
-    Réservation
-  </Typography>
-  <Typography variant="body1" id="modal-description">
-    Remplissez le formulaire
-  </Typography>
-  {/* Intégration du composant CheckoutForm */
-}
-// <Elements stripe={stripePromise}>
-//   {/* <CheckoutForm totalAmount={getTotalAmount(selectedCardId)} /> */}
-//   <CheckoutForm totalAmount="15" />
-// </Elements>
-// </div>
-// </Modal> */}

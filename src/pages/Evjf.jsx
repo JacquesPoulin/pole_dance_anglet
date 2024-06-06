@@ -240,7 +240,7 @@ const Evjf = () => {
                   onChange={handleInputChange}
                   onClick={() => handleInputClick("brideName")}
                   className={isBrideNameClicked ? "clicked" : ""}
-                  placeholder="Prénom et Nom"
+                  placeholder="Prénom & Nom"
                   required
                 />
               </label>
@@ -268,7 +268,7 @@ const Evjf = () => {
                   onChange={handleInputChange}
                   onClick={() => handleInputClick("contactMail")}
                   className={iscontactMailClicked ? "clicked" : ""}
-                  placeholder="Insérez votre mail"
+                  placeholder="exemple@gmail.com"
                   required
                 />
               </label>
@@ -287,7 +287,7 @@ const Evjf = () => {
                   onBlur={handleInputBlur}
                 />
               </label>
-              <button type="submit" style={{ marginTop: "0" }}>
+              <button type="submit" style={{ marginTop: "1rem" }}>
                 Envoyer
               </button>
             </form>

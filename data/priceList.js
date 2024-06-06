@@ -51,21 +51,21 @@ const priceList = [
     alt: "Liste des tarifs",
 
     //  ** Carte pour 10 cours **
-    description_cours: "Cours à l'unité",
-    tarif_cours: "15€/personne",
+    description_cours: "Cours privé",
+    tarif_cours: "Me contacter",
 
     //  ** Carte de 10 Cours / personne **
-    description_collectif: "Carte de 10 Cours",
-    tarif_collectif: "135€",
+    description_collectif: "",
+    tarif_collectif: "",
 
     //  ** stage **
     description_stage: "",
     tarif_stage: "",
 
     // ** lien pour en savoir plus **
-    info: "RESERVER",
+    info: "ME CONTACTER",
     info2: "Zen & Harmonie",
-    lienPaiement: "https://book.stripe.com/fZeaGN9yC2tZfPa144",
+    // lienPaiement: "https://book.stripe.com/fZeaGN9yC2tZfPa144",
   },
   {
     id: 2,
@@ -78,7 +78,7 @@ const priceList = [
 
     //  ** Cours particuliers **
     description_cours: "Cours particuliers",
-    tarif_cours: "35€/personne",
+    tarif_cours: "40€/personne",
 
     //  ** Cours pour 2 personnes **
     description_collectif: "Cours pour 2 personnes",
@@ -88,10 +88,13 @@ const priceList = [
     description_stage: "Stage de pole dance",
     tarif_stage: "25€/personne",
 
+    // ** trimestre **
+    description_trimestre: "Abonnement",
+    tarif_trimestre: "225€/trimestre (14 cours)",
+
     // ** lien pour en savoir plus **
-    info: "RESERVER",
+    info: "ME CONTACTER",
     info2: "Grâce & souplesse",
-    lienPaiement: "https://book.stripe.com/dR616ddOSb0v46sbIJ",
   },
   {
     id: 3,
@@ -115,7 +118,7 @@ const priceList = [
     tarif_stage: "25€/personne",
 
     // ** lien pour en savoir plus **
-    info: "RESERVER",
+    info: "ME CONTACTER",
     info2: "Moments inoubliables",
   },
   {
@@ -128,19 +131,19 @@ const priceList = [
     alt: "Liste des tarifs",
 
     //  ** Carte pour 10 cours **
-    description_cours: "Cours à l'unité",
-    tarif_cours: "15€/personne",
+    description_cours: "Cours privé",
+    tarif_cours: "Me contacter",
 
     //  ** Carte de 10 Cours / personne **
-    description_collectif: "Carte de 10 Cours",
-    tarif_collectif: "135€",
+    description_collectif: "",
+    tarif_collectif: "",
 
     //  ** stage **
     description_stage: "",
     tarif_stage: "",
 
     // ** lien pour en savoir plus **
-    info: "RESERVER",
+    info: "ME CONTACTER",
     info2: "Renforcement musculaire",
   },
 ];

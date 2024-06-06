@@ -5,7 +5,7 @@
   background-position: center;
   background-size: cover;
 
- h1 {
+  h1 {
     padding: 4rem 0 5rem 0;
     text-align: center;
     color: aliceblue;
@@ -25,54 +25,61 @@
     width: 100%;
     display: flex;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     &__presentation {
-    width: 66%;
-    text-align: justify;
-    margin: 0 0 2rem 1rem;
-    padding: 1rem;
-    background: transparent;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+      width: 66%;
+      text-align: justify;
+      margin: 0 0 2rem 1rem;
+      padding: 1rem;
+      background: transparent;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
 
-    &__txtBloc1 {
-      margin-top: -0.5rem;
-    }
+      @media (max-width: 768px) {
+        width: 80%;
+      }
 
-    &__txtBloc2 {
-      text-align: center;
-      margin-top: -1rem;
-    }
+      &__txtBloc1 {
+        margin-top: -0.5rem;
+      }
 
-    p{
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
+      &__txtBloc2 {
+        text-align: center;
+        margin-top: -1rem;
+      }
 
-    li {
-      color: aliceblue;
-      line-height: 2rem;
-      cursor: text;
-    }
-    u {
-      margin-right: 10px;
+      p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      li {
+        color: aliceblue;
+        line-height: 2rem;
+        cursor: text;
+      }
+      u {
+        margin-right: 10px;
+      }
     }
   }
-}
 
   &__button-container {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }  
+  }
 
   &__form-container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 2rem;
 
@@ -81,36 +88,48 @@
     }
 
     form {
-      width: 100%;
+      width: 30rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       gap: 1rem;
+
+      @media (max-width: 768px) {
+        width: 80%;
+      }
 
       label {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         font-size: 1.2rem;
         color: aliceblue;
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
       }
 
-      input, textarea {
+      input,
+      textarea {
         margin-left: 1rem;
         outline: none;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         border: 0;
         font-size: 1.1rem;
         padding: 1rem;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Quicksand", sans-serif;
+        @media (max-width: 768px) {
+          font-size: 0.8rem;
+          padding: 1rem;
+        }
       }
 
       input {
-        width: 30%;
+        width: 50%;
       }
-      
+
       textarea {
         width: 50%;
       }
@@ -125,18 +144,20 @@
 }
 
 // -- Animate the size, outside --
-.pulse:hover, 
+.pulse:hover,
 .pulse:focus {
   animation: pulse 1s;
   box-shadow: 0 0 0 2rem transparent;
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 var(--hover); }
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
 }
 
 $colors: (
-  pulse: #b89657, 
+  pulse: #b89657,
 );
 
 button {
@@ -144,7 +165,7 @@ button {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
   font: inherit;
   font-size: 1.5rem;
   margin: 5rem;
@@ -152,13 +173,12 @@ button {
   color: aliceblue;
   letter-spacing: 1px;
   animation: colorAnime 5s ease-in-out infinite alternate;
-  &:hover{ 
+  &:hover {
     color: #dd9dfa;
   }
-  
 }
 
-.highlight{
+.highlight {
   padding: 1px 5px 3px 5px;
   margin: 0 3px 0 5px;
   border-radius: 10px;

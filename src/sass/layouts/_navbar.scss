@@ -119,9 +119,10 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    z-index: 2; /* Assure que le burger menu est au-dessus du fond */
+    z-index: 20; /* Assure que le burger menu est au-dessus du fond */
     background-color: #bb86fc;
     color: #f0f8ff;
+    border-radius: 0.5rem;
     visibility: visible; /* Rend le hamburger menu visible par défaut */
   }
 

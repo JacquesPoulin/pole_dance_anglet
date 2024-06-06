@@ -39,6 +39,7 @@ import {
 const Contact = () => {
   // ! *** STATES ***
   const [showPopup, setShowPopup] = useState(false);
+
   const [formDataContact, setFormDataContact] = useState({
     // État pour stocker les données du formulaire
     name: "",
@@ -99,134 +100,128 @@ const Contact = () => {
   return (
     <div name="Contact" className="contact">
       <h1>Contact</h1>
+      <p>
+        N'hésitez pas à me contacter pour de plus amples informations (tarifs,
+        planning...)
+      </p>
+      <div className="contact__form-container">
+        <form
+          method="POST"
+          className="contact__form"
+          onSubmit={handleSubmitFormContact}
+        >
+          {/* NOM */}
+          <TextField
+            required
+            id="nom"
+            label="Nom"
+            value={formDataContact.name}
+            name="name"
+            type="text"
+            autoComplete="off"
+            variant="standard"
+            color="secondary"
+            onChange={handleInputChange}
+          />
 
+          {/* PRENOM */}
+          <TextField
+            id="prénom"
+            label="Prénom"
+            value={formDataContact.firstname}
+            name="firstname"
+            type="text"
+            autoComplete="off"
+            variant="standard"
+            color="secondary"
+            onChange={handleInputChange}
+          />
+
+          {/* MAIL */}
+          <TextField
+            required
+            id="email"
+            label="Email"
+            value={formDataContact.mail}
+            name="mail"
+            type="email"
+            placeholder="exemple@gmail.com"
+            autoComplete="off"
+            variant="standard"
+            color="secondary"
+            onChange={handleInputChange}
+          />
+
+          {/* MESSAGE */}
+          <TextField
+            required
+            id="message"
+            label="Message"
+            value={formDataContact.message}
+            name="message"
+            type="text"
+            autoComplete="off"
+            multiline
+            rows={5}
+            variant="standard"
+            color="secondary"
+            onChange={handleInputChange}
+          />
+
+          {/* BOUTON ENVOYER */}
+          <Button
+            id="button"
+            color="secondary"
+            variant="none"
+            endIcon={<SendIcon />}
+            type="submit"
+          >
+            Envoyer
+          </Button>
+        </form>
+        {/* Pop-up de confirmation */}
+        <Dialog open={showPopup} onClose={() => setShowPopup(false)}>
+          <DialogTitle>Message envoyé !</DialogTitle>
+          <DialogContent>
+            Votre message est bien reçu et je vous en suis très reconnaissante.
+            Je prendrai le temps de vous répondre dès que possible.
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={() => setShowPopup(false)}
+              color="primary"
+              autoFocus
+            >
+              Fermer
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+      <div>
+        <Link
+          activeClass="active"
+          to="Accueil"
+          spy
+          smooth
+          isDynamic
+          duration={1000}
+        >
+          <img
+            src="../../public/images/svg/arrow-up-circle-svgrepo-com.svg"
+            alt="Flèche pour revenir à l'accueil"
+            title="Revenir à l'accueil"
+          />
+        </Link>
+      </div>
       <>
         <div className="contact__googleMap">
           {/* GOOGLE MAP */}
-          <iframe
+          {/* <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.6809506112354!2d-1.4916217235531457!3d43.48812827111045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5140642e919c97%3A0x6377a6d7fdaf08a1!2s44%20Rue%20de%20Masure%2C%2064100%20Bayonne!5e0!3m2!1sfr!2sfr!4v1707588270971!5m2!1sfr!2sfr"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-
-          <form
-            method="POST"
-            className="contact__form"
-            onSubmit={handleSubmitFormContact}
-          >
-            {/* NOM */}
-            <TextField
-              required
-              id="nom"
-              label="Nom"
-              value={formDataContact.name}
-              name="name"
-              type="text"
-              autoComplete="off"
-              variant="standard"
-              color="secondary"
-              onChange={handleInputChange}
-            />
-
-            {/* PRENOM */}
-            <TextField
-              id="prénom"
-              label="Prénom"
-              value={formDataContact.firstname}
-              name="firstname"
-              type="text"
-              autoComplete="off"
-              variant="standard"
-              color="secondary"
-              onChange={handleInputChange}
-            />
-
-            {/* MAIL */}
-            <TextField
-              required
-              id="email"
-              label="Email"
-              value={formDataContact.mail}
-              name="mail"
-              type="email"
-              placeholder="exemple@gmail.com"
-              autoComplete="off"
-              variant="standard"
-              color="secondary"
-              onChange={handleInputChange}
-            />
-
-            {/* MESSAGE */}
-            <TextField
-              required
-              id="message"
-              label="Message"
-              value={formDataContact.message}
-              name="message"
-              type="text"
-              autoComplete="off"
-              multiline
-              rows={5}
-              variant="standard"
-              color="secondary"
-              onChange={handleInputChange}
-            />
-
-            {/* BOUTON ENVOYER */}
-            <Button
-              id="button"
-              color="secondary"
-              variant="none"
-              endIcon={<SendIcon />}
-              type="submit"
-            >
-              Envoyer
-            </Button>
-          </form>
-
-          {/* Pop-up de confirmation */}
-          <Dialog open={showPopup} onClose={() => setShowPopup(false)}>
-            <DialogTitle>Message envoyé !</DialogTitle>
-            <DialogContent>
-              Votre message est bien reçu et je vous en suis très
-              reconnaissante. Je prendrai le temps de vous répondre dès que
-              possible.
-            </DialogContent>
-            <DialogActions>
-              <Button
-                onClick={() => setShowPopup(false)}
-                color="primary"
-                autoFocus
-              >
-                Fermer
-              </Button>
-            </DialogActions>
-          </Dialog>
-        </div>
-        <div className="contact__cta-navbar">
-          {/* REVENIR AU DÉBUT */}
-          <Link
-            activeClass="active"
-            to="Accueil"
-            spy
-            smooth
-            isDynamic
-            duration={200}
-          >
-            <p title="Revenir au début">Accueil</p>
-            {/* <FontAwesomeIcon icon="fa-solid fa-house" /> */}
-          </Link>
-          <Link
-            activeClass="active"
-            to="Tarifs"
-            spy
-            smooth
-            isDynamic
-            duration={200}
-          >
-            <p title="Voir les tarifs">Tarifs</p>
-          </Link>
+          ></iframe> */}
         </div>
       </>
     </div>

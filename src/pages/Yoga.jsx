@@ -6,13 +6,15 @@ import { Link } from "react-scroll";
 const Yoga = () => {
   return (
     <>
-      <h1 name="Yoga" className="yoga-title">Yoga</h1>
+      <h1 name="Yoga" className="yoga-title">
+        Yoga
+      </h1>
       <div className="yoga">
         <div className="gallery">
           {/* Insère ici ta galerie d'images */}
           <img src="/images/danse/IMG-20221124-WA0001.jpg" alt="Yoga" />
         </div>
-        <div className="marketing-text">
+        <div className="marketing">
           <h3>Pourquoi choisir le Yoga ?</h3>
           <p>
             Le Yoga est bien plus qu'une simple pratique physique. C'est un

@@ -6,7 +6,9 @@ import { Link } from "react-scroll";
 const PoleDance = () => {
   return (
     <>
-      <h1 name="Pole Dance" className="poleDance-title">Pole Dance</h1>
+      <h1 name="Pole Dance" className="poleDance-title">
+        Pole Dance
+      </h1>
       <div className="poleDance">
         <div className="gallery">
           <img src="/images/bar/IMG-20221124-WA0002.jpg" alt="Pole Dance" />
