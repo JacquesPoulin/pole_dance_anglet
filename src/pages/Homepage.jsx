@@ -28,7 +28,7 @@ const Homepage = () => {
               "PROFESSEUR DE POLE DANCE",
               "PROFESSEUR DE PILATES",
               "PROFESSEUR DE YOGA",
-              "Enterrement de vie de jeune fille",
+              "EVJF & SHOOTING PHOTO",
               "COURS PARTICULIERS",
             ]}
             loop={0}
