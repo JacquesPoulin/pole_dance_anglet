@@ -207,7 +207,7 @@ const Contact = () => {
           duration={1000}
         >
           <img
-            src="../../public/images/svg/arrow-up-circle-svgrepo-com.svg"
+            src="/images/svg/arrow-up-circle-svgrepo-com.svg"
             alt="Flèche pour revenir à l'accueil"
             title="Revenir à l'accueil"
           />

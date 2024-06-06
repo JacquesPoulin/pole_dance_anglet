@@ -230,6 +230,7 @@ const Evjf = () => {
         {isFormVisible && (
           <div className="evjf__form-container">
             <h3>Demande de devis</h3>
+            <p>- SHOOTING PHOTO POSSIBLE- </p>
             <form method="POST" onSubmit={handleSubmitFormEvjf}>
               <label>
                 Nom complet de la mariée :
