@@ -175,6 +175,11 @@
     padding-bottom: 64rem;
   }
 }
+@media (max-width: 730px) {
+  .biographie {
+    padding-bottom: 85rem;
+  }
+}
 
 @media (max-width: 1050px) {
   .containers {
