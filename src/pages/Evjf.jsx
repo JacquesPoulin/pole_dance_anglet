@@ -281,7 +281,7 @@ const Evjf = () => {
                   name="specialRequests"
                   value={formData.specialRequests}
                   placeholder={
-                    isInputFocused ? "" : "Une demande particulère ?"
+                    isInputFocused ? "" : "Une demande particulère ? (Shooting photo,...)"
                   }
                   onChange={handleInputChange}
                   onFocus={handleInputFocus}
