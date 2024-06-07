@@ -15,26 +15,26 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 
 // ! --- FONTAWESOME PACKAGES ---
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // ! ------ Pattern for the email input ------
-const EMAIL_REGEX = new RegExp(
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-);
+// const EMAIL_REGEX = new RegExp(
+//   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+// );
 
 // ! *** VARIABLES DES MEDIA QUERIES ***
 // const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1px)" });
 
 // ! ----- react-toastify Components  -----
 import "react-toastify/dist/ReactToastify.css";
-import {
-  Bounce,
-  Flip,
-  Slide,
-  toast,
-  ToastContainer,
-  Zoom,
-} from "react-toastify";
+// import {
+//   Bounce,
+//   Flip,
+//   Slide,
+//   toast,
+//   ToastContainer,
+//   Zoom,
+// } from "react-toastify";
 
 const Contact = () => {
   // ! *** STATES ***
@@ -50,11 +50,6 @@ const Contact = () => {
 
   // ! *** VARIABLES ***
   const { serviceId, templateId, userId } = configContact;
-
-  // ? Pattern for the email input
-  const EMAIL_REGEX = new RegExp(
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  );
 
   // ! *** FONCTIONS ***
   const handleInputChange = (event) => {
@@ -102,7 +97,7 @@ const Contact = () => {
       <h1>Contact</h1>
       <p>
         N'hésitez pas à me contacter pour de plus amples informations (tarifs,
-        planning...)
+        lieu, horaires...)
       </p>
       <div className="contact__form-container">
         <form

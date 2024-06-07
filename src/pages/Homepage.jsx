@@ -25,11 +25,13 @@ const Homepage = () => {
         <h5>
           <Typewriter
             words={[
-              "PROFESSEUR DE POLE DANCE",
-              "PROFESSEUR DE PILATES",
-              "PROFESSEUR DE YOGA",
+              "POLE DANCE",
+              "PILATES",
+              "YOGA",
               "EVJF & SHOOTING PHOTO",
               "COURS PARTICULIERS",
+              "STAGES",
+              "",
             ]}
             loop={0}
             typeSpeed={50}
