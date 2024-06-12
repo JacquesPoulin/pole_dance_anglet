@@ -98,3 +98,24 @@ h1 {
     transform: scale(1.1);
   }
 }
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.toggleButton {
+  background-color: #84378d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.toggleButton:hover {
+  background-color: #9c4cb0;
+}
