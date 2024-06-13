@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import configContact from "../utils/configContact.js"; // ? variables d'environnement
 import { Link } from "react-scroll";
+import Fade from "react-reveal/Fade";
 // import { useMediaQuery } from "react-responsive";
 
 // ! --- MUI PACKAGES ---
@@ -94,120 +95,127 @@ const Contact = () => {
   // ! *** RENDERING ***
   return (
     <div name="Contact" className="contact">
-      <h1>Contact</h1>
-      <p>
-        N'hésitez pas à me contacter pour de plus amples informations (tarifs,
-        lieu, horaires...)
-      </p>
-      <div className="contact__form-container">
-        <form
-          method="POST"
-          className="contact__form"
-          onSubmit={handleSubmitFormContact}
-        >
-          {/* NOM */}
-          <TextField
-            required
-            id="nom"
-            label="Nom"
-            value={formDataContact.name}
-            name="name"
-            type="text"
-            autoComplete="off"
-            variant="standard"
-            color="secondary"
-            onChange={handleInputChange}
-          />
-
-          {/* PRENOM */}
-          <TextField
-            id="prénom"
-            label="Prénom"
-            value={formDataContact.firstname}
-            name="firstname"
-            type="text"
-            autoComplete="off"
-            variant="standard"
-            color="secondary"
-            onChange={handleInputChange}
-          />
-
-          {/* MAIL */}
-          <TextField
-            required
-            id="email"
-            label="Email"
-            value={formDataContact.mail}
-            name="mail"
-            type="email"
-            placeholder="exemple@gmail.com"
-            autoComplete="off"
-            variant="standard"
-            color="secondary"
-            onChange={handleInputChange}
-          />
-
-          {/* MESSAGE */}
-          <TextField
-            required
-            id="message"
-            label="Message"
-            value={formDataContact.message}
-            name="message"
-            type="text"
-            autoComplete="off"
-            multiline
-            rows={5}
-            variant="standard"
-            color="secondary"
-            onChange={handleInputChange}
-          />
-
-          {/* BOUTON ENVOYER */}
-          <Button
-            id="button"
-            color="secondary"
-            variant="none"
-            endIcon={<SendIcon />}
-            type="submit"
+      <Fade bottom>
+        <h1>Contact</h1>
+        <p>
+          N'hésitez pas à me contacter pour de plus amples informations (tarifs,
+          lieu, horaires...)
+        </p>
+      </Fade>
+      <Fade bottom>
+        <div className="contact__form-container">
+          <form
+            method="POST"
+            className="contact__form"
+            onSubmit={handleSubmitFormContact}
           >
-            Envoyer
-          </Button>
-        </form>
-        {/* Pop-up de confirmation */}
-        <Dialog open={showPopup} onClose={() => setShowPopup(false)}>
-          <DialogTitle>Message envoyé !</DialogTitle>
-          <DialogContent>
-            Votre message est bien reçu et je vous en suis très reconnaissante.
-            Je prendrai le temps de vous répondre dès que possible.
-          </DialogContent>
-          <DialogActions>
+            {/* NOM */}
+            <TextField
+              required
+              id="nom"
+              label="Nom"
+              value={formDataContact.name}
+              name="name"
+              type="text"
+              autoComplete="off"
+              variant="standard"
+              color="secondary"
+              onChange={handleInputChange}
+            />
+
+            {/* PRENOM */}
+            <TextField
+              id="prénom"
+              label="Prénom"
+              value={formDataContact.firstname}
+              name="firstname"
+              type="text"
+              autoComplete="off"
+              variant="standard"
+              color="secondary"
+              onChange={handleInputChange}
+            />
+
+            {/* MAIL */}
+            <TextField
+              required
+              id="email"
+              label="Email"
+              value={formDataContact.mail}
+              name="mail"
+              type="email"
+              placeholder="exemple@gmail.com"
+              autoComplete="off"
+              variant="standard"
+              color="secondary"
+              onChange={handleInputChange}
+            />
+
+            {/* MESSAGE */}
+            <TextField
+              required
+              id="message"
+              label="Message"
+              value={formDataContact.message}
+              name="message"
+              type="text"
+              autoComplete="off"
+              multiline
+              rows={5}
+              variant="standard"
+              color="secondary"
+              onChange={handleInputChange}
+            />
+
+            {/* BOUTON ENVOYER */}
             <Button
-              onClick={() => setShowPopup(false)}
-              color="primary"
-              autoFocus
+              id="button"
+              color="secondary"
+              variant="none"
+              endIcon={<SendIcon />}
+              type="submit"
             >
-              Fermer
+              Envoyer
             </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
-      <div>
-        <Link
-          activeClass="active"
-          to="Accueil"
-          spy
-          smooth
-          isDynamic
-          duration={1000}
-        >
-          <img
-            src="/images/svg/arrow-up-circle-svgrepo-com.svg"
-            alt="Flèche pour revenir à l'accueil"
-            title="Revenir à l'accueil"
-          />
-        </Link>
-      </div>
+          </form>
+          {/* Pop-up de confirmation */}
+          <Dialog open={showPopup} onClose={() => setShowPopup(false)}>
+            <DialogTitle>Message envoyé !</DialogTitle>
+            <DialogContent>
+              Votre message est bien reçu et je vous en suis très
+              reconnaissante. Je prendrai le temps de vous répondre dès que
+              possible.
+            </DialogContent>
+            <DialogActions>
+              <Button
+                onClick={() => setShowPopup(false)}
+                color="primary"
+                autoFocus
+              >
+                Fermer
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </div>
+      </Fade>
+      <Fade bottom>
+        <div>
+          <Link
+            activeClass="active"
+            to="Accueil"
+            spy
+            smooth
+            isDynamic
+            duration={1000}
+          >
+            <img
+              src="/images/svg/arrow-up-circle-svgrepo-com.svg"
+              alt="Flèche pour revenir à l'accueil"
+              title="Revenir à l'accueil"
+            />
+          </Link>
+        </div>
+      </Fade>
       <>
         <div className="contact__googleMap">
           {/* GOOGLE MAP */}

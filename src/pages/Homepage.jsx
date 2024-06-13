@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 
-
 const Homepage = () => {
   const [showMenu, setShowMenu] = useState(false);
 
