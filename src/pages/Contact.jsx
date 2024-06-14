@@ -18,11 +18,6 @@ import DialogActions from "@mui/material/DialogActions";
 // ! --- FONTAWESOME PACKAGES ---
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// ! ------ Pattern for the email input ------
-// const EMAIL_REGEX = new RegExp(
-//   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-// );
-
 // ! *** VARIABLES DES MEDIA QUERIES ***
 // const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1px)" });
 
@@ -97,6 +92,8 @@ const Contact = () => {
     <div name="Contact" className="contact">
       <Fade bottom>
         <h1>Contact</h1>
+      </Fade>
+      <Fade bottom>
         <p>
           N'hésitez pas à me contacter pour de plus amples informations (tarifs,
           lieu, horaires...)
