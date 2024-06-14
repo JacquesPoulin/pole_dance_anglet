@@ -2,22 +2,22 @@ import React from "react";
 
 // ----- Packages  -----
 import { Link } from "react-scroll";
-import Fade from "react-reveal/Fade";
+
 
 const Pilates = () => {
   return (
     <>
-      <Fade bottom>
+     
         <h1 name="Pilates" className="pilates-title">
           Pilates
         </h1>
-      </Fade>
+     
       <div className="pilates">
         <div className="gallery">
           {/* Insère ici ta galerie d'images */}
           <img src="/images/danse/IMG-20221124-WA0008.jpg" alt="Pilates" />
         </div>
-        <Fade bottom>
+   
           <div className="marketing">
             <h3>Pourquoi choisir le Pilates ?</h3>
             <p>
@@ -49,7 +49,7 @@ const Pilates = () => {
               </Link>
             </div>
           </div>
-        </Fade>
+    
       </div>
     </>
   );

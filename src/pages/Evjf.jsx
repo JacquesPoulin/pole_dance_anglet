@@ -5,7 +5,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import configDevis from "../utils/configDevis.js"; // ? variables d'environnement
 import emailjs from "emailjs-com";
-import Fade from "react-reveal/Fade";
 
 // ! --- MUI PACKAGES ---
 // import SendIcon from "@mui/icons-material/Send";
@@ -150,11 +149,11 @@ const Evjf = () => {
   return (
     <div name="EVJF" className="evjf">
       <div id="opacity-effet">
-        <Fade bottom>
+
           <h1>EVJF</h1>
-        </Fade>
+    
         <div className="evjf__text-container">
-          <Fade left>
+      
             <div className="evjf__text-container__presentation">
               {/**** PRESENTATION ****/}
               <p className="evjf__text-container__presentation__txtBloc1">
@@ -214,10 +213,10 @@ const Evjf = () => {
                 </li>
               </ul>
             </div>
-          </Fade>
+ 
 
           {/**** BOUTON DEVIS ****/}
-          <Fade right>
+       
             <div className="evjf__button-container">
               {isFormVisible ? (
                 <button onClick={handleToggleForm}>Masquer le devis</button>
@@ -225,7 +224,7 @@ const Evjf = () => {
                 <button onClick={handleToggleForm}>DEVIS</button>
               )}
             </div>
-          </Fade>
+    
         </div>
 
         {/**** Formulaire ****/}
@@ -298,7 +297,7 @@ const Evjf = () => {
                 </button>
               </form>
             </div>
-          </Fade>
+   
         )}
       </div>
       {/**** Message Toastify ****/}

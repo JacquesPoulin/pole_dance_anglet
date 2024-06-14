@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // ! --- PACKAGES ---
 import { Link } from "react-scroll";
-import Fade from "react-reveal/Fade";
+
 
 // ! --- DATAS ---
 import galleryList from "../../data/galleryList";
@@ -22,7 +22,7 @@ const Galerie = () => {
   return (
     <div name="Galerie" className="gallerie">
       <div>
-        <Fade bottom>
+ 
           <div className="arrowUp">
             <Link
               activeClass="active"
@@ -39,14 +39,13 @@ const Galerie = () => {
               />
             </Link>
           </div>
-        </Fade>
-        <Fade bottom>
+  
           <h1 className="gallerie__title">Galerie</h1>
-        </Fade>
+   
       </div>
 
       {/*** MAIN GALLERY BLOC ***/}
-      <Fade bottom>
+    
         <div className="gallery">
           {/*** GALLERY COLUMNS ***/}
           {galleryList
@@ -62,7 +61,7 @@ const Galerie = () => {
               </div>
             ))}
         </div>
-      </Fade>
+  
 
       {/* BOUTON POUR BASCULER L'AFFICHAGE */}
       <div className="buttonContainer">

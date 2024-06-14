@@ -1,6 +1,6 @@
 // ! *** IMPORTS & PACKAGES ***
 import { Link } from "react-scroll";
-import Fade from "react-reveal/Fade";
+
 
 // ! --- DATAS ---
 import priceList from "../../data/priceList";
@@ -9,14 +9,14 @@ const Tarifs = () => {
   return (
     <div name="Tarifs" className="tarif">
       {/* TITLE */}
-      <Fade bottom>
+
         <div className="tarif__title">
           <h1>TARIFS</h1>
         </div>
-      </Fade>
+ 
 
       <section className="hero-section">
-        <Fade bottom>
+ 
           <div className="card-grid">
             {priceList?.map(
               ({
@@ -109,7 +109,7 @@ const Tarifs = () => {
               )
             )}
           </div>
-        </Fade>
+    
       </section>
     </div>
   );

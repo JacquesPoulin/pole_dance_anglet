@@ -2,21 +2,21 @@ import React from "react";
 
 // ! ----- Packages  -----
 import { Link } from "react-scroll";
-import Fade from "react-reveal/Fade";
+
 
 const PoleDance = () => {
   return (
     <>
-      <Fade bottom>
+   
         <h1 name="Pole Dance" className="poleDance-title">
           Pole Dance
         </h1>
-      </Fade>
+
       <div className="poleDance">
         <div className="gallery">
           <img src="/images/bar/IMG-20221124-WA0002.jpg" alt="Pole Dance" />
         </div>
-        <Fade bottom>
+    
           <div className="marketing">
             <h3>Pourquoi choisir la Pole Dance ?</h3>
             <p>
@@ -45,7 +45,7 @@ const PoleDance = () => {
               </Link>
             </div>
           </div>
-        </Fade>
+      
       </div>
     </>
   );
