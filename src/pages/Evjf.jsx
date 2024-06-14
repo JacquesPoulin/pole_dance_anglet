@@ -149,53 +149,51 @@ const Evjf = () => {
   return (
     <div name="EVJF" className="evjf">
       <div id="opacity-effet">
+        <h1>EVJF</h1>
 
-          <h1>EVJF</h1>
-    
         <div className="evjf__text-container">
-      
-            <div className="evjf__text-container__presentation">
-              {/**** PRESENTATION ****/}
-              <p className="evjf__text-container__presentation__txtBloc1">
-                Parce que nous aspirons toutes à des moments inoubliables, votre
-                mission est de réaliser le rêve d'EVJF parfait pour votre
-                meilleure amie. Trouver l'activité idéale pour rendre cet
-                événement unique n'est pas chose aisée...
-                <br />
-                C'est pourquoi je vous propose de plonger dans une expérience à
-                la fois sensuelle, amusante et pleine de surprises : un cours de
-                pole dance !
-              </p>
+          <div className="evjf__text-container__presentation">
+            {/**** PRESENTATION ****/}
+            <p className="evjf__text-container__presentation__txtBloc1">
+              Parce que nous aspirons toutes à des moments inoubliables, votre
+              mission est de réaliser le rêve d'EVJF parfait pour votre
+              meilleure amie. Trouver l'activité idéale pour rendre cet
+              événement unique n'est pas chose aisée...
               <br />
-              <p className="evjf__text-container__presentation__txtBloc2">
-                Choisissez une <span> activité tendance pour votre EVJF :</span>
-                <br />
-                <br />
-                <span className="highlight">Sensualité</span>&
-                <span className="highlight">Rires garantis</span>
-                <br />
-              </p>
-              <p style={{ textAlign: "center" }}>
-                Pourquoi choisir cette activité ?
-              </p>
-              <ul>
-                <li>
-                  <span>
-                    <u>Originalité</u>
-                  </span>
-                  ↪ Offrez à la mariée et à vos amies une expérience unique dont
-                  elles se souviendront longtemps !
-                </li>
+              C'est pourquoi je vous propose de plonger dans une expérience à la
+              fois sensuelle, amusante et pleine de surprises : un cours de pole
+              dance !
+            </p>
+            <br />
+            <p className="evjf__text-container__presentation__txtBloc2">
+              Choisissez une <span> activité tendance pour votre EVJF :</span>
+              <br />
+              <br />
+              <span className="highlight">Sensualité</span>&
+              <span className="highlight">Rires garantis</span>
+              <br />
+            </p>
+            <p style={{ textAlign: "center" }}>
+              Pourquoi choisir cette activité ?
+            </p>
+            <ul>
+              <li>
+                <span>
+                  <u>Originalité</u>
+                </span>
+                ↪ Offrez à la mariée et à vos amies une expérience unique dont
+                elles se souviendront longtemps !
+              </li>
 
-                <li>
-                  <span>
-                    <u>Sportivité</u>
-                  </span>
-                  ↪ Sculptez votre corps tout en vous amusant : chaque mouvement
-                  de pole dance tonifie et renforce vos muscles en profondeur.
-                </li>
+              <li>
+                <span>
+                  <u>Sportivité</u>
+                </span>
+                ↪ Sculptez votre corps tout en vous amusant : chaque mouvement
+                de pole dance tonifie et renforce vos muscles en profondeur.
+              </li>
 
-                {/* <li>
+              {/* <li>
                 <span>
                   <u>Sensualité</u>
                 </span>
@@ -203,101 +201,97 @@ const Evjf = () => {
                 confiance en vous et votre élégance, acquises lors de ce cours.
               </li> */}
 
-                <li>
-                  <span>
-                    <u>Plaisir</u>
-                  </span>
-                  ↪ Créez des souvenirs inoubliables et partagez des moments de
-                  complicité et de joie avec vos amies lors de cette activité
-                  ludique et originale !
-                </li>
-              </ul>
-            </div>
- 
+              <li>
+                <span>
+                  <u>Plaisir</u>
+                </span>
+                ↪ Créez des souvenirs inoubliables et partagez des moments de
+                complicité et de joie avec vos amies lors de cette activité
+                ludique et originale !
+              </li>
+            </ul>
+          </div>
 
           {/**** BOUTON DEVIS ****/}
-       
-            <div className="evjf__button-container">
-              {isFormVisible ? (
-                <button onClick={handleToggleForm}>Masquer le devis</button>
-              ) : (
-                <button onClick={handleToggleForm}>DEVIS</button>
-              )}
-            </div>
-    
+
+          <div className="evjf__button-container">
+            {isFormVisible ? (
+              <button onClick={handleToggleForm}>Masquer le devis</button>
+            ) : (
+              <button onClick={handleToggleForm}>DEVIS</button>
+            )}
+          </div>
         </div>
 
         {/**** Formulaire ****/}
         {isFormVisible && (
-          <Fade>
-            <div className="evjf__form-container">
-              <h3>Demande de devis</h3>
-              <p>- SHOOTING PHOTO POSSIBLE- </p>
-              <form method="POST" onSubmit={handleSubmitFormEvjf}>
-                <label>
-                  Nom complet de la mariée :
-                  <input
-                    type="text"
-                    name="brideName"
-                    value={formData.brideName}
-                    onChange={handleInputChange}
-                    onClick={() => handleInputClick("brideName")}
-                    className={isBrideNameClicked ? "clicked" : ""}
-                    placeholder="Prénom & Nom"
-                    required
-                  />
-                </label>
+          <div className="evjf__form-container">
+            <h3>Demande de devis</h3>
+            <p>- SHOOTING PHOTO POSSIBLE- </p>
+            <form method="POST" onSubmit={handleSubmitFormEvjf}>
+              <label>
+                Nom complet de la mariée :
+                <input
+                  type="text"
+                  name="brideName"
+                  value={formData.brideName}
+                  onChange={handleInputChange}
+                  onClick={() => handleInputClick("brideName")}
+                  className={isBrideNameClicked ? "clicked" : ""}
+                  placeholder="Prénom & Nom"
+                  required
+                />
+              </label>
 
-                <label>
-                  Nombre de participants :
-                  <input
-                    type="number"
-                    name="participantCount"
-                    value={formData.participantCount}
-                    onChange={handleInputChange}
-                    onClick={() => handleInputClick("participantCount")}
-                    className={isParticipantCountClicked ? "clicked" : ""}
-                    placeholder="Insérez un nombre"
-                    required
-                  />
-                </label>
+              <label>
+                Nombre de participants :
+                <input
+                  type="number"
+                  name="participantCount"
+                  value={formData.participantCount}
+                  onChange={handleInputChange}
+                  onClick={() => handleInputClick("participantCount")}
+                  className={isParticipantCountClicked ? "clicked" : ""}
+                  placeholder="Insérez un nombre"
+                  required
+                />
+              </label>
 
-                <label>
-                  Mail de contact :
-                  <input
-                    type="email"
-                    name="contactMail"
-                    value={formData.contactMail}
-                    onChange={handleInputChange}
-                    onClick={() => handleInputClick("contactMail")}
-                    className={iscontactMailClicked ? "clicked" : ""}
-                    placeholder="exemple@gmail.com"
-                    required
-                  />
-                </label>
+              <label>
+                Mail de contact :
+                <input
+                  type="email"
+                  name="contactMail"
+                  value={formData.contactMail}
+                  onChange={handleInputChange}
+                  onClick={() => handleInputClick("contactMail")}
+                  className={iscontactMailClicked ? "clicked" : ""}
+                  placeholder="exemple@gmail.com"
+                  required
+                />
+              </label>
 
-                <label>
-                  Message :
-                  <textarea
-                    rows={10}
-                    name="specialRequests"
-                    value={formData.specialRequests}
-                    placeholder={
-                      isInputFocused
-                        ? ""
-                        : "Une demande particulère ? (Shooting photo,...)"
-                    }
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                  />
-                </label>
-                <button type="submit" style={{ marginTop: "1rem" }}>
-                  Envoyer
-                </button>
-              </form>
-            </div>
-   
+              <label>
+                Message :
+                <textarea
+                  rows={10}
+                  name="specialRequests"
+                  value={formData.specialRequests}
+                  placeholder={
+                    isInputFocused
+                      ? ""
+                      : "Une demande particulère ? (Shooting photo,...)"
+                  }
+                  onChange={handleInputChange}
+                  onFocus={handleInputFocus}
+                  onBlur={handleInputBlur}
+                />
+              </label>
+              <button type="submit" style={{ marginTop: "1rem" }}>
+                Envoyer
+              </button>
+            </form>
+          </div>
         )}
       </div>
       {/**** Message Toastify ****/}
