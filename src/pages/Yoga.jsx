@@ -1,22 +1,46 @@
 import React from "react";
 
-// ----- Packages  -----
+// ! ----- Packages  -----
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Yoga = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Pour déclencher l'animation une seule fois
+    threshold: 0.1, // Le pourcentage de visibilité pour déclencher l'animation
+  });
   return (
     <>
-      <h1 name="Yoga" className="yoga-title">
-        Yoga
-      </h1>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        ref={ref}
+      >
+        <h1 name="Yoga" className="yoga-title">
+          Yoga
+        </h1>
+      </motion.div>
 
       <div className="yoga">
-        <div className="gallery">
-          {/* Insère ici ta galerie d'images */}
-          <img src="/images/danse/IMG-20221124-WA0001.jpg" alt="Yoga" />
-        </div>
-
-        <div className="marketing">
+        <motion.div
+          className="marketing"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <div className="gallery">
+            {/* Insère ici ta galerie d'images */}
+            <img src="/images/danse/IMG-20221124-WA0001.jpg" alt="Yoga" />
+          </div>
+        </motion.div>
+        <motion.div
+          className="marketing"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <h3>Pourquoi choisir le Yoga ?</h3>
           <p>
             Le Yoga est bien plus qu'une simple pratique physique. C'est un
@@ -42,7 +66,7 @@ const Yoga = () => {
               <button>Voir les tarifs</button>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

@@ -5,15 +5,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import configDevis from "../utils/configDevis.js"; // ? variables d'environnement
 import emailjs from "emailjs-com";
-
-// ! --- MUI PACKAGES ---
-// import SendIcon from "@mui/icons-material/Send";
-// import Button from "@mui/material/Button";
-// import TextField from "@mui/material/TextField";
-// import Dialog from "@mui/material/Dialog";
-// import DialogTitle from "@mui/material/DialogTitle";
-// import DialogContent from "@mui/material/DialogContent";
-// import DialogActions from "@mui/material/DialogActions";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Evjf = () => {
   // ! *** STATES ***
@@ -129,6 +122,11 @@ const Evjf = () => {
     }
   };
 
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Pour déclencher l'animation une seule fois
+    threshold: 0.1, // Le pourcentage de visibilité pour déclencher l'animation
+  });
+
   // ! *** HOOKS ***
   // ? >>> Permet de gérer les clics en dehors du formulaire <<<
   useEffect(() => {
@@ -147,12 +145,23 @@ const Evjf = () => {
 
   // ! *** RENDERING ***
   return (
-    <div name="EVJF" className="evjf">
+    <div name="EVJF" className="evjf" ref={ref}>
       <div id="opacity-effet">
-        <h1>EVJF</h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1 }}
+        >
+          <h1>EVJF</h1>
+        </motion.div>
 
         <div className="evjf__text-container">
-          <div className="evjf__text-container__presentation">
+          <motion.div
+            className="evjf__text-container__presentation"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             {/**** PRESENTATION ****/}
             <p className="evjf__text-container__presentation__txtBloc1">
               Parce que nous aspirons toutes à des moments inoubliables, votre
@@ -210,22 +219,31 @@ const Evjf = () => {
                 ludique et originale !
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/**** BOUTON DEVIS ****/}
-
-          <div className="evjf__button-container">
+          <motion.div
+            className="evjf__button-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             {isFormVisible ? (
               <button onClick={handleToggleForm}>Masquer le devis</button>
             ) : (
               <button onClick={handleToggleForm}>DEVIS</button>
             )}
-          </div>
+          </motion.div>
         </div>
 
         {/**** Formulaire ****/}
         {isFormVisible && (
-          <div className="evjf__form-container">
+          <motion.div
+            className="evjf__form-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: inView ? 1 : 0 }}
+            transition={{ duration: 1 }}
+          >
             <h3>Demande de devis</h3>
             <p>- SHOOTING PHOTO POSSIBLE- </p>
             <form method="POST" onSubmit={handleSubmitFormEvjf}>
@@ -291,7 +309,7 @@ const Evjf = () => {
                 Envoyer
               </button>
             </form>
-          </div>
+          </motion.div>
         )}
       </div>
       {/**** Message Toastify ****/}

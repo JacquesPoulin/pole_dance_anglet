@@ -1,28 +1,54 @@
 import React from "react";
 
-// ! --- Imports divers ---
+// ! ----- Packages  -----
 import { Link } from "react-scroll";
 import Parcours from "../components/Parcours";
 import Methode from "../components/Methode";
-
-// ! --- MUI PACKAGES ---
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Button from "@mui/material/Button";
 
 const Biographie = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Pour déclencher l'animation une seule fois
+    threshold: 0.1, // Le pourcentage de visibilité pour déclencher l'animation
+  });
+
   return (
-    <div name="Biographie" className="biographie parallax">
-      <h1>Biographie</h1>
+    <div name="Biographie" className="biographie parallax" ref={ref}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>Biographie</h1>
+      </motion.div>
 
       <div className="containers">
-        <div className="biographie__container-left">
+        <motion.div
+          className="biographie__container-left"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <Parcours />
-        </div>
-        <div className="biographie__container-right">
+        </motion.div>
+        <motion.div
+          className="biographie__container-right"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
           <Methode />
-        </div>
+        </motion.div>
       </div>
 
-      <div className="biographie__cta-button-container">
+      <motion.div
+        className="biographie__cta-button-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
+      >
         {/* BOUTON ENVOYER */}
         <Link
           activeClass="active"
@@ -41,7 +67,7 @@ const Biographie = () => {
             Me contacter
           </Button>
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };

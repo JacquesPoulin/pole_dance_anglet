@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import configContact from "../utils/configContact.js"; // ? variables d'environnement
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 // import { useMediaQuery } from "react-responsive";
 
 // ! --- MUI PACKAGES ---
@@ -86,17 +88,32 @@ const Contact = () => {
     });
   };
 
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Pour déclencher l'animation une seule fois
+    threshold: 0.1, // Le pourcentage de visibilité pour déclencher l'animation
+  });
   // ! *** RENDERING ***
   return (
-    <div name="Contact" className="contact">
-      <h1>Contact</h1>
+    <div name="Contact" className="contact" ref={ref}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>Contact</h1>
 
-      <p>
-        N'hésitez pas à me contacter pour de plus amples informations (tarifs,
-        lieu, horaires...)
-      </p>
+        <p>
+          N'hésitez pas à me contacter pour de plus amples informations (tarifs,
+          lieu, horaires...)
+        </p>
+      </motion.div>
 
-      <div className="contact__form-container">
+      <motion.div
+        className="contact__form-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
         <form
           method="POST"
           className="contact__form"
@@ -188,9 +205,14 @@ const Contact = () => {
             </Button>
           </DialogActions>
         </Dialog>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        className=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: inView ? 1 : 0 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
         <Link
           activeClass="active"
           to="Accueil"
@@ -205,18 +227,7 @@ const Contact = () => {
             title="Revenir à l'accueil"
           />
         </Link>
-      </div>
-      <>
-        <div className="contact__googleMap">
-          {/* GOOGLE MAP */}
-          {/* <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.6809506112354!2d-1.4916217235531457!3d43.48812827111045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5140642e919c97%3A0x6377a6d7fdaf08a1!2s44%20Rue%20de%20Masure%2C%2064100%20Bayonne!5e0!3m2!1sfr!2sfr!4v1707588270971!5m2!1sfr!2sfr"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe> */}
-        </div>
-      </>
+      </motion.div>
     </div>
   );
 };
