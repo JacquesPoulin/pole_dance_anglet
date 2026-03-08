@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤸‍♀️ Pole Dance Anglet
 
-## Getting Started
+Une application web vitrine moderne et performante, construite avec Next.js, pour le studio professionnel Pole Dance Anglet.
 
-First, run the development server:
+## 🌟 Présentation du projet
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Ce projet est la refonte complète du site internet du studio "Pole Dance Anglet". L'objectif était de remplacer l'ancien site par une architecture moderne, fluide et administrable (headless CMS), offrant :
+
+- Une **expérience utilisateur (UX)** immersive (vidéos, effets parallaxe, animations fluides).
+- Une **gestion de contenu autonome** pour la propriétaire grâce à l'intégration profonde de Sanity.
+- Un **formulaire de contact performant**, sécurisé et relayé directement par e-mail.
+
+## 🚀 Fonctionnalités principales
+
+- **Hero Section dynamique** : background vidéo HTML5 en lecture automatique et optimisé mobile.
+- **Galerie d'images filtrable** : administrée depuis le CMS, avec système de classification par catégories dynamiques.
+- **Contenu Modulable** : les textes, les images de parcours, les sections de cours (Pole, Pilates, Yoga) et les formules de tarifs (EVJF).
+- **Formulaire de contact** : avec validation Zod stricte côté client/serveur, protection contre les erreurs d'hydratation (causées par les navigateurs/extensions), et notifications toast.
+- **Envoi de Mails (API)** : interfaçage avec l'API Resend pour relayer les demandes directement à l'adresse de la propriétaire.
+- **Design 100% Responsif** : pensé First-Mobile, avec système de navigation "ScrollToTop" et ancre de défilement fluide.
+
+## 🛠️ Stack Technique
+
+Construit avec des technologies front-end de pointe pour assurer performance, SEO et maintenabilité :
+
+### Core
+
+- [**Next.js 15+ (App Router)**](https://nextjs.org/) - Framework React pour le SSR / SSG.
+- [**React 19**](https://react.dev/) - Bibliothèque UI.
+- [**TypeScript**](https://www.typescriptlang.org/) - Typage statique robuste.
+
+### Styling & UI
+
+- [**Tailwind CSS (v4)**](https://tailwindcss.com/) - Framework CSS utilitaire pour le design systémique (Thème personnalisé : Rose, Slate, Violet).
+- [**Framer Motion**](https://www.framer.com/motion/) - Bibliothèque de contrôle d'animations (fadeIn, apparitions).
+- [**Lucide React**](https://lucide.dev/) - Bibliothèque d'icônes légères.
+- [**React Hot Toast**](https://react-hot-toast.com/) - Notifications utilisateur élégantes.
+
+### Backend & CMS
+
+- [**Sanity Studio (v3)**](https://www.sanity.io/) - Headless CMS directement embarqué (Route `/studio`).
+- [**Resend**](https://resend.com/) - SDK d'envoi et de routage d'e-mails transactionnels.
+
+### Gestion de Formulaire
+
+- [**React Hook Form**](https://react-hook-form.com/) - Gestion de l'état du formulaire.
+- [**Zod**](https://zod.dev/) - Définition de schémas et validation asynchrone sécurisée.
+
+## 🏗️ Architecture du projet
+
+```plaintext
+src/
+├── app/                  # Next.js 15 App Router
+│   ├── api/send/         # Route API backend (Resend)
+│   ├── studio/           # Route d'administration Sanity CMS intégrée
+│   ├── globals.css       # Style global (Tailwind)
+│   ├── layout.tsx        # Layout principal de l'application
+│   └── page.tsx          # Page d'accueil (Landing Page)
+├── components/           # Composants UI React
+│   ├── Contact.tsx       # Formulaire avec RHF & Zod
+│   ├── Courses.tsx       # Cartes des cours + Parallaxe
+│   ├── Gallery.tsx       # Filtrage des images du CMS
+│   ├── Hero.tsx          # Section d'accueil vidéo
+│   ├── Navbar.tsx        # Navigation sticky
+│   ├── Pricing.tsx       # Carrousel et Tarifs
+│   └── ScrollToTop.tsx   # Bouton de retour contextuel
+└── sanity/               # Configuration et Schémas du CMS
+    ├── lib/              # Clients et helpers Sanity
+    └── schemaTypes/      # Schémas de BDD (ex: galleryType)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Installation & Lancement local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Si vous souhaitez cloner ou analyser le projet en local :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Cloner le repository**
 
-## Learn More
+   ```bash
+   git clone https://github.com/votre-pseudo/poledanceanglet.git
+   cd poledanceanglet
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Installer les dépendances**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Configurer les variables d'environnement**
+   Créez un fichier `.env.local` à la racine reprenant cette structure :
 
-## Deploy on Vercel
+   ```env
+   NEXT_PUBLIC_SANITY_PROJECT_ID="votre_project_id"
+   NEXT_PUBLIC_SANITY_DATASET="production"
+   RESEND_API_KEY="re_votre_cle_api"
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Lancer le serveur de développement**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm run dev
+   ```
+
+   _L'application sera disponible sur `http://localhost:3000` et le CMS sur `http://localhost:3000/studio`._
+
+## 💎 Qualité du code
+
+- Respect strict des limites Client Components (`use client`) et Server Components (`use server`).
+- UI protégée contre les erreurs "Hydration Mismatch" souvent générées par les plugins de mots de passe (stratégie `suppressHydrationWarning`).
+- Typage fort `interface` via TypeScript sur l'intégration Sanity.
+
+## 👨‍💻 Auteurs
+
+- **Jacques Poulin** - Développeur.
