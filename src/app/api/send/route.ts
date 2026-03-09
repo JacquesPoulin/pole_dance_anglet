@@ -15,11 +15,10 @@ export async function POST(req: Request) {
 			);
 		}
 
-		// Envoi réel de l'email via Resend
+		// Envoi de l'email via Resend
 		const { data, error } = await resend.emails.send({
-			from: 'Contact Site <onboarding@resend.dev>',
-			// to: ['soniadancer0@gmail.com'], // l'adresse qui recevra les emails
-			to: ['jacques.poulin64@gmail.com'], // l'adresse qui recevra les emails
+			from: 'Site Pole Dance <contact@poledanceanglet.fr>',
+			to: ['soniadancer0@gmail.com'],
 			replyTo: email,
 			subject: `Nouveau message de ${prenom} ${nom} depuis le site`,
 			html: `<p><strong>De :</strong> ${prenom} ${nom}</p>
