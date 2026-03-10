@@ -18,9 +18,11 @@ export const metadata: Metadata = {
 		'Studio de Pole Dance à Anglet (Pays Basque). Spécialiste des EVJF (Enterrement de vie de jeune fille), cours réguliers de Pole, Cerceau Aérien, Yoga et Pilates. Réservez votre événement sur la Côte Basque !',
 	keywords: [
 		'Pole Dance Anglet',
+		'Pole Dance',
 		'EVJF Pays Basque',
 		'Enterrement de vie de jeune fille Anglet',
 		'Pays basque Pole Dance',
+		'Euskal Herria',
 		'EVJF Biarritz Bayonne',
 		'Cerceau aérien',
 		'Studio Pole Dance 64',
