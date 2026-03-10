@@ -34,14 +34,15 @@ export default function Hero() {
 				<h1 className='text-5xl font-extrabold tracking-tight sm:text-7xl mb-6'>
 					Révélez votre force & votre grâce
 				</h1>
-				<p className='mt-4 text-xl sm:text-2xl text-slate-200 font-light mb-8'>
-					Pole Dance, Pilates & Yoga à Anglet
-				</p>
+				<h2 className='mt-4 text-xl sm:text-2xl text-slate-200 font-light mb-8'>
+					<strong>Pole Dance</strong>, Pilates & Yoga à{' '}
+					<strong>Anglet (Pays Basque)</strong>
+				</h2>
 				<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 					<a
 						href='#evjf'
 						className='rounded-full bg-[#dca7e2] px-8 py-4 text-lg font-semibold text-fuchsia-800 shadow-sm hover:bg-fuchsia-200 focus-visible:outline transition-colors duration-200'>
-						Organiser un EVJF
+						Organiser un EVJF Côte Basque
 					</a>
 					<a
 						href='#contact'

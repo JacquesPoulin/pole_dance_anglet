@@ -69,7 +69,10 @@ export default function Gallery({ images = [] }: GalleryProps) {
 								className='relative aspect-square rounded-2xl overflow-hidden group bg-rose-50 cursor-pointer'>
 								<Image
 									src={img.imageUrl}
-									alt={img.title || 'Image Galerie'}
+									alt={
+										img.title ||
+										'Cours de Pole Dance et EVJF à Anglet - Côte Basque'
+									}
 									fill
 									className='object-cover transition-transform duration-500 group-hover:scale-110'
 								/>
@@ -107,7 +110,10 @@ export default function Gallery({ images = [] }: GalleryProps) {
 								onClick={(e) => e.stopPropagation()}>
 								<Image
 									src={selectedImage.imageUrl}
-									alt={selectedImage.title || 'Image Galerie Grand Format'}
+									alt={
+										selectedImage.title ||
+										'Cours de Pole Dance et EVJF à Anglet - Grand Format'
+									}
 									fill
 									className='object-contain'
 								/>
@@ -119,4 +125,3 @@ export default function Gallery({ images = [] }: GalleryProps) {
 		</section>
 	);
 }
-

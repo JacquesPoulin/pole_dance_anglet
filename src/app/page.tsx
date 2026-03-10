@@ -169,9 +169,13 @@ export default async function Home() {
 						<h2 className='text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-[#84378d]'>
 							Enterrement de Vie de Jeune Fille{' '}
 							<span className='block text-3xl mt-2 text-rose-700 font-medium'>
-								(EVJF)
+								(EVJF à Anglet - Côte Basque)
 							</span>
 						</h2>
+						<p className='text-xl text-slate-700 font-medium max-w-3xl mx-auto'>
+							L'<strong>activité originale</strong> par excellence pour un{' '}
+							<strong>EVJF inoubliable</strong> près de Biarritz et Bayonne.
+						</p>
 					</div>
 
 					<div className='grid grid-cols-1 md:grid-cols-12 gap-12 items-center'>
@@ -188,7 +192,8 @@ export default async function Home() {
 								<strong className='text-rose-700'>
 									sensuelle, amusante et pleine de surprises
 								</strong>{' '}
-								: un cours de pole dance 100% privatisé !
+								: un cours de pole dance 100% privatisé ! Parfait pour un{' '}
+								<strong>EVJF sportif et original au Pays Basque</strong>.
 							</p>
 
 							<div className='bg-white p-8 rounded-3xl shadow-sm border border-rose-100'>
@@ -251,7 +256,7 @@ export default async function Home() {
 									<span className='block font-bold text-[#84378d] text-3xl mt-2'>
 										activité tendance
 									</span>
-									pour votre EVJF !
+									pour votre EVJF au Pays Basque !
 								</p>
 								<div className='flex gap-4 justify-center items-center text-rose-700 font-medium text-lg mt-6'>
 									<span className='px-4 py-2 bg-rose-100 rounded-full'>

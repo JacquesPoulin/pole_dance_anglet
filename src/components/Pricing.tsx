@@ -86,11 +86,12 @@ export default function Pricing() {
 			<div className='max-w-7xl mx-auto relative z-10'>
 				<div className='text-center mb-16'>
 					<h2 className='text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-[#84378d]'>
-						Nos Tarifs
+						Tarifs
 					</h2>
 					<p className='text-lg text-slate-700 max-w-2xl mx-auto'>
 						Découvrez nos formules adaptées à vos envies, que ce soit pour une
-						séance de découverte, un suivi régulier ou un événement spécial.
+						séance de découverte, un suivi régulier à Anglet ou un événement
+						spécial comme un Enterrement de Vie de Jeune Fille.
 					</p>
 				</div>
 
