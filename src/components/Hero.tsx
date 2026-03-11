@@ -31,12 +31,12 @@ export default function Hero() {
 				initial={{ opacity: 0, y: 30 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8 }}>
-				<h1 className='text-5xl font-extrabold tracking-tight sm:text-7xl mb-6'>
+				<h1 className='text-3xl font-extrabold tracking-tight sm:text-5xl mb-6'>
 					Révélez votre force & votre grâce
 				</h1>
 				<h2 className='mt-4 text-xl sm:text-2xl text-slate-200 font-light mb-8'>
 					<strong>Pole Dance</strong>, Pilates & Yoga à{' '}
-					<strong>Anglet (Pays Basque)</strong>
+					<strong>Anglet</strong>
 				</h2>
 				<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 					<a
