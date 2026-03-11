@@ -42,7 +42,7 @@ export default function Hero() {
 					<a
 						href='#evjf'
 						className='rounded-full bg-[#dca7e2] px-8 py-4 text-lg font-semibold text-fuchsia-800 shadow-sm hover:bg-fuchsia-200 focus-visible:outline transition-colors duration-200'>
-						Organiser un EVJF Côte Basque
+						Organiser un EVJF
 					</a>
 					<a
 						href='#contact'

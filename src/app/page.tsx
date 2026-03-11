@@ -169,7 +169,7 @@ export default async function Home() {
 						<h2 className='text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-[#84378d]'>
 							Enterrement de Vie de Jeune Fille{' '}
 							<span className='block text-3xl mt-2 text-rose-700 font-medium'>
-								(EVJF à Anglet - Côte Basque)
+								(EVJF - Côte Basque)
 							</span>
 						</h2>
 						<p className='text-xl text-slate-700 font-medium max-w-3xl mx-auto'>
